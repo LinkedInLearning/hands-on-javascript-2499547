@@ -51,5 +51,5 @@ img {
 }
 
 .main-content {
-  width: min(90vw, 120ch);
+  width: min(90vw, 80ch);
 }
