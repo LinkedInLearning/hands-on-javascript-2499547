@@ -1,0 +1,23 @@
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  border: 3px solid black;
+}
+
+.image__caption {
+  padding: 1rem 2rem;
+}
+
+.main-content {
+  width: min(90vw, 120ch);
+}
