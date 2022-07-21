@@ -1,0 +1,19 @@
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-content {
+  width: min(90vw, 120ch);
+}
