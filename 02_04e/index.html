@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script type="module" src="script.js" defer></script>
+    <title>Display a loader and simulate loading time</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">Display a loader and simulate loading time</h1>
+
+      <!-- Accessible toggle. Source: https://kittygiraudel.com/2021/04/05/an-accessible-toggle/ -->
+      <link href="toggle.css" rel="stylesheet" />
+      <button class="toggle" type="button" aria-pressed="false">
+        <span class="toggle__text">View mode:</span>
+        <span class="toggle__display" hidden>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 14 14"
+            class="toggle__icon toggle__icon--checkmark"
+            aria-hidden="true"
+            focusable="false"
+            xml:space="preserve"
+          >
+            <path
+              d="M11.28 2.08c-.15-.16-.74-.78-1.73-1.24 1.12 2.26 1.2 5.43-1.03 7.65A6.495 6.495 0 0 1 .94 9.66a6.488 6.488 0 0 0 10.34 1.59c2.86-2.85 1.84-7.17 0-9.17z"
+              style="
+                fill: none;
+                stroke: currentcolor;
+                stroke-width: 1.5;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+              "
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            x="0"
+            y="0"
+            viewBox="0 0 14 14"
+            aria-hidden="true"
+            focusable="false"
+            class="toggle__icon toggle__icon--cross"
+          >
+            <style>
+              .st0 {
+                fill: none;
+                stroke: currentcolor;
+                stroke-width: 1.5;
+                stroke-miterlimit: 10;
+              }
+            </style>
+            <circle class="st0" cx="7" cy="7" r="3.98" />
+            <defs>
+              <path
+                id="SVGID_1_"
+                d="M14 14H0V0h14v14zM7 1.58C4.01 1.58 1.58 4.01 1.58 7S4.01 12.42 7 12.42 12.42 9.99 12.42 7 9.99 1.58 7 1.58z"
+              />
+            </defs>
+            <clipPath
+              id="SVGID_00000090264577678927063210000006056326128449703595_"
+            >
+              <use xlink:href="#SVGID_1_" style="overflow: visible" />
+            </clipPath>
+            <g
+              style="
+                clip-path: url(#SVGID_00000090264577678927063210000006056326128449703595_);
+              "
+            >
+              <path class="st0" d="m2.86 12.66 8.23-11.32" />
+
+              <path class="st0" d="m.32 9.16 13.31-4.32" />
+
+              <path class="st0" d="m.32 4.84 13.31 4.32" />
+              <g>
+                <path class="st0" d="m2.86 1.34 8.23 11.32" />
+              </g>
+              <g>
+                <path class="st0" d="M6.97 0v14" />
+              </g>
+            </g>
+          </svg>
+        </span>
+      </button>
+
+      <article class="main-content ">
+        
+        <section class="cardlist skeleton">
+          <link href="loader.css" rel="stylesheet" />
+          <span class="loader hidden">
+          </span>
+          <button id="load">Load content</button>
+        <ul class="cardlist__list">
+          <li class="cardlist__item">
+            <figure class="image">
+              <div></div>
+              <figcaption class="image__caption">
+                <h3 class="image__title">
+                  
+                </h3>
+                <div class="image__meta">
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                    </a>
+                  </p>
+                  <p>
+                  
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="cardlist__item">
+            <figure class="image">
+              <div></div>
+              <figcaption class="image__caption">
+                <h3 class="image__title">
+                  
+                </h3>
+                <div class="image__meta">
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                    </a>
+                  </p>
+                  <p>
+                  
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="cardlist__item">
+            <figure class="image">
+              <div></div>
+             
+              <figcaption class="image__caption">
+                <h3 class="image__title">
+                  
+                </h3>
+                <div class="image__meta">
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                    </a>
+                  </p>
+                  <p>
+                  
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="cardlist__item">
+            <figure class="image">
+              <div></div>
+              <figcaption class="image__caption">
+                <h3 class="image__title">
+                  
+                </h3>
+                <div class="image__meta">
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                  </p>
+                  <p>
+                  
+                    </a>
+                  </p>
+                  <p>
+                  
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      </article>
+    </div>
+  </body>
+</html>
