@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script type="module" src="script.js" defer></script>
+    <title>Current Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">Current Weather</h1>
+
+      <form class="locationform">
+        <div class="locationform__elements">
+          <label for="location">Enter location:</label>
+          <!-- Regex generator: https://regex-generator.olafneumann.org/ -->
+          <!-- Regex explainer: https://regexr.com/ -->
+          <input
+            id="location"
+            type="text"
+            name="text"
+            minlength="5"
+            size="40"
+            placeholder="City,state code (if USA),country code"
+            pattern="[a-zA-ZàáâäąćçęéèëêìíïîóòôùúûüÿæœøåńñśźżÀÂÄÔÉÈËÊÏÎŸÇÙÛÜÆŒØÅßẞłĄĆĘŁŃÓŚŹŻÌÍÒÚÁÑ\s]+,[a-zA-Z]{2}|[a-zA-ZàáâäąćçęéèëêìíïîóòôùúûüÿæœøåńñśźżÀÂÄÔÉÈËÊÏÎŸÇÙÛÜÆŒØÅßẞłĄĆĘŁŃÓŚŹŻÌÍÒÚÁÑ\s]+,[a-zA-Z]{2},[a-zA-Z]{2}"
+          />
+          <input type="submit" value="Submit" />
+        </div>
+        <p class="error hidden"></p>
+        <p class="instructions">
+          For USA, enter "[city],[state],US" where [state] is the two-letter
+          abbreviation. For every other country, enter "[city],[country]" where
+          [country] is the two-letter abbreviation.
+        </p>
+      </form>
+
+      <section class="main-content">
+        <article class="weathercard">
+          <link href="loader.css" rel="stylesheet" />
+          <span class="loader hidden"> </span>
+          <div class="weathercard__meta">
+            <div class="weathercard__meta-location">--</div>
+          </div>
+          <div class="weathercard__temp">
+            <span class="temp">--</span><span class="tempunit">°C</span>
+          </div>
+          <div class="weathercard__wind">
+            <div class="weathercard__wind-speed">
+              <span class="speed">--</span><span class="windunit">m/s</span>
+            </div>
+          </div>
+          <button id="units">Change units</button>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
