@@ -32,9 +32,7 @@ const getDate = (imgData) => {
 };
 
 const Card = (data) => {
-  console.log(data[0]);
   const imgData = data[0];
-  console.log(imgData);
 
   return `
     <article class="main-content">
