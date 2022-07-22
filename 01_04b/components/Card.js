@@ -39,29 +39,29 @@ const getDate = (imgData) => {
 
 const Card = (imgData) => {
   return `
-      <figure class="image">
-        ${buildImage(imgData)}
-        <figcaption class="image__caption">
-          <h3 class="image__title">${imgData.description}</h3>
-          <div class="image__meta">
-            <p>
-              Photo by
-              <span class="image__photog">${imgData.user.name}</span>.
-            </p>
-            <p>
-              Uploaded on <time class="image__date" datetime="${
-                imgData.created_at
-              }">${getDate(imgData)}</time>.
-            </p>
-            <p>
-              <a href="${imgData.links.self}" class="image__link">
-                View it on Unsplash.
-              </a>
-            </p>
-          </div>
-        </figcaption>
-      </figure>
-    `;
+    <figure class="image">
+      ${buildImage(imgData)}
+      <figcaption class="image__caption">
+        <h3 class="image__title">${imgData.description}</h3>
+        <div class="image__meta">
+          <p>
+            Photo by
+            <span class="image__photog">${imgData.user.name}</span>.
+          </p>
+          <p>
+            Uploaded on <time class="image__date" datetime="${
+              imgData.created_at
+            }">${getDate(imgData)}</time>.
+          </p>
+          <p>
+            <a href="${imgData.links.self}" class="image__link">
+              View it on Unsplash.
+            </a>
+          </p>
+        </div>
+      </figcaption>
+    </figure>
+  `;
 };
 
 export default Card;

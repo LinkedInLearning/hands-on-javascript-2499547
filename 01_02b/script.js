@@ -13,7 +13,6 @@ const Card = (data) => {
   const date = new Date(imgData.created_at);
 
   const markup = `
-  <article class="main-content">
     <figure class="image">
       <img
         srcset="

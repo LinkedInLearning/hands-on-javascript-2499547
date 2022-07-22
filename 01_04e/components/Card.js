@@ -50,29 +50,29 @@ const Card = (imgData) => {
     links: { self },
   } = imgData;
   return `
-      <figure class="image">
-        ${buildImage(imgData)}
-        <figcaption class="image__caption">
-          <h3 class="image__title">${description}</h3>
-          <div class="image__meta">
-            <p>
-              Photo by
-              <span class="image__photog">${name}</span>.
-            </p>
-            <p>
-              Uploaded on <time class="image__date" datetime="${createdDate}">${getDate(
-    createdDate
-  )}</time>.
-            </p>
-            <p>
-              <a href="${self}" class="image__link">
-                View it on Unsplash.
-              </a>
-            </p>
-          </div>
-        </figcaption>
-      </figure>
-    `;
+    <figure class="image">
+      ${buildImage(imgData)}
+      <figcaption class="image__caption">
+        <h3 class="image__title">${description}</h3>
+        <div class="image__meta">
+          <p>
+            Photo by
+            <span class="image__photog">${name}</span>.
+          </p>
+          <p>
+            Uploaded on <time class="image__date" datetime="${createdDate}">${getDate(
+  createdDate
+)}</time>.
+          </p>
+          <p>
+            <a href="${self}" class="image__link">
+              View it on Unsplash.
+            </a>
+          </p>
+        </div>
+      </figcaption>
+    </figure>
+  `;
 };
 
 export default Card;
