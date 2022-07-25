@@ -1,9 +1,11 @@
 /**
- * Lazy-load data on scroll.
- * Use IntersectionObserver to detect when the cardlist appears.
+ * Create a "loading" indicator triggered on button click.
+ * - Use CSS to hide/show the loader.
+ * - Create artificial delay of loading using setTimeout()
  * References:
- * - https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
- * - https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver
+ * - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+ * - https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
  */
 
 import data from "./data.js";
@@ -22,27 +24,14 @@ const newData = data.map((imgData) => {
 const mainContent = document.querySelector(".main-content");
 const loadButton = document.querySelector("#load");
 const loader = document.querySelector(".loader");
-const target = document.querySelector(".cardlist");
 
-const loadCards = (entries) => {
-  console.log(entries);
-  console.log("intersection");
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      loader.classList.toggle("hidden");
-      loadButton.classList.toggle("hidden");
-      setTimeout(() => {
-        mainContent.innerHTML = Cardlist(newData);
-      }, 3000);
-    }
-  });
-};
-
-// Intersection observer
-
-const observer = new IntersectionObserver(loadCards);
-
-observer.observe(target);
+loadButton.addEventListener("click", () => {
+  loader.classList.toggle("hidden");
+  loadButton.classList.toggle("hidden");
+  setTimeout(() => {
+    mainContent.innerHTML = Cardlist(newData);
+  }, 3000);
+});
 
 /**
  * Light/dark mode feature.

@@ -52,16 +52,6 @@ img {
 
 .main-content {
   width: min(90vw, 120ch);
-  margin-block-end: 50rem;
-}
-
-.filler {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 5rem;
 }
 
 /* Card styles */

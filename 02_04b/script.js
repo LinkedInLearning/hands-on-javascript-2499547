@@ -1,11 +1,7 @@
 /**
- * Create a "loading" indicator triggered on button click.
- * - Use CSS to hide/show the loader.
- * - Create artificial delay of loading using setTimeout()
+ * Store dark mode user preference in localstorage.
  * References:
- * - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
- * - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
- * - https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
  */
 
 import data from "./data.js";
@@ -33,26 +29,15 @@ const toggle = document.querySelector(".toggle");
 
 // Detect mode on load and set toggle state accordingly.
 const displayModeOnLoad = () => {
-  console.log(localStorage.getItem("darkMode"));
-  let dark = false;
-  // Set dark to true if prefers-color-scheme is set to dark.
-  dark = !!(
+  if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
-  console.log(dark);
-  // Set dark to true of localStorage "darkMode" is set to enabled.
-  dark = localStorage.getItem("darkMode") === "enabled";
-  console.log(dark);
-
-  if (dark) {
+  ) {
     docElement.classList.add("dark");
     toggle.setAttribute("aria-pressed", "true");
-    localStorage.setItem("darkMode", "enabled");
   } else {
     docElement.classList.add("light");
     toggle.removeAttribute("aria-pressed");
-    localStorage.setItem("darkMode", "disabled");
   }
 };
 displayModeOnLoad();
@@ -61,10 +46,8 @@ displayModeOnLoad();
 const toggleDisplayMode = () => {
   if (toggle.getAttribute("aria-pressed") === "true") {
     toggle.removeAttribute("aria-pressed");
-    localStorage.setItem("darkMode", "disabled");
   } else {
     toggle.setAttribute("aria-pressed", "true");
-    localStorage.setItem("darkMode", "enabled");
   }
 
   docElement.classList.toggle("dark");
