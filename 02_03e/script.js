@@ -1,7 +1,7 @@
 /**
  * Create a light/dark mode switch.
  * References:
- * - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
  * - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
  */
 
