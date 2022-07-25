@@ -1,5 +1,5 @@
 /**
- * Create a light/dark mode switch.
+ * Detect browser color scheme.
  * References:
  * - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
  * - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
@@ -7,8 +7,6 @@
 
 import data from "./data.js";
 import Cardlist from "./components/Cardlist.js";
-
-const docElement = document.documentElement;
 
 // Add license info to each data object.
 const license = {
@@ -28,6 +26,7 @@ mainContent.innerHTML = Cardlist(newData);
  * Light/dark mode feature.
  */
 const toggle = document.querySelector(".toggle");
+const docElement = document.documentElement;
 
 // Trigger mode change with toggle.
 const toggleDisplayMode = () => {
