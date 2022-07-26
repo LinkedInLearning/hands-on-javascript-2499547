@@ -1,7 +1,8 @@
 /**
- * Store dark mode user preference in localstorage.
+ * Detect browser color scheme.
  * References:
- * - https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
  */
 
 import data from "./data.js";
@@ -24,23 +25,8 @@ mainContent.innerHTML = Cardlist(newData);
 /**
  * Light/dark mode feature.
  */
-const docElement = document.documentElement;
 const toggle = document.querySelector(".toggle");
-
-// Detect mode on load and set toggle state accordingly.
-const displayModeOnLoad = () => {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    docElement.classList.add("dark");
-    toggle.setAttribute("aria-pressed", "true");
-  } else {
-    docElement.classList.add("light");
-    toggle.removeAttribute("aria-pressed");
-  }
-};
-displayModeOnLoad();
+const docElement = document.documentElement;
 
 // Trigger mode change with toggle.
 const toggleDisplayMode = () => {
@@ -50,7 +36,7 @@ const toggleDisplayMode = () => {
     toggle.setAttribute("aria-pressed", "true");
   }
 
-  docElement.classList.toggle("dark");
   docElement.classList.toggle("light");
+  docElement.classList.toggle("dark");
 };
 toggle.addEventListener("click", () => toggleDisplayMode());

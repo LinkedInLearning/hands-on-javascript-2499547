@@ -25,23 +25,8 @@ mainContent.innerHTML = Cardlist(newData);
 /**
  * Light/dark mode feature.
  */
-const docElement = document.documentElement;
 const toggle = document.querySelector(".toggle");
-
-// Detect mode on load and set toggle state accordingly.
-const displayModeOnLoad = () => {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    docElement.classList.add("dark");
-    toggle.setAttribute("aria-pressed", "true");
-  } else {
-    docElement.classList.add("light");
-    toggle.removeAttribute("aria-pressed");
-  }
-};
-displayModeOnLoad();
+const docElement = document.documentElement;
 
 // Trigger mode change with toggle.
 const toggleDisplayMode = () => {

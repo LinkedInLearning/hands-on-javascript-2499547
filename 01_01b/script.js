@@ -13,7 +13,6 @@ const Card = (data) => {
   const imgData = data[0];
 
   const markup = `
-  <article class="main-content">
     <figure class="image">
       <img
         srcset="

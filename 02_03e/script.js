@@ -1,7 +1,8 @@
 /**
- * Store dark mode user preference in localstorage.
+ * Create a light/dark mode switch.
  * References:
- * - https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
  */
 
 import data from "./data.js";
@@ -29,26 +30,15 @@ const toggle = document.querySelector(".toggle");
 
 // Detect mode on load and set toggle state accordingly.
 const displayModeOnLoad = () => {
-  console.log(localStorage.getItem("darkMode"));
-  let dark = false;
-  // Set dark to true if prefers-color-scheme is set to dark.
-  dark = !!(
+  if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
-  console.log(dark);
-  // Set dark to true of localStorage "darkMode" is set to enabled.
-  dark = localStorage.getItem("darkMode") === "enabled";
-  console.log(dark);
-
-  if (dark) {
+  ) {
     docElement.classList.add("dark");
     toggle.setAttribute("aria-pressed", "true");
-    localStorage.setItem("darkMode", "enabled");
   } else {
     docElement.classList.add("light");
     toggle.removeAttribute("aria-pressed");
-    localStorage.setItem("darkMode", "disabled");
   }
 };
 displayModeOnLoad();
@@ -57,10 +47,8 @@ displayModeOnLoad();
 const toggleDisplayMode = () => {
   if (toggle.getAttribute("aria-pressed") === "true") {
     toggle.removeAttribute("aria-pressed");
-    localStorage.setItem("darkMode", "disabled");
   } else {
     toggle.setAttribute("aria-pressed", "true");
-    localStorage.setItem("darkMode", "enabled");
   }
 
   docElement.classList.toggle("dark");
