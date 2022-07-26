@@ -54,6 +54,15 @@ img {
   width: min(90vw, 120ch);
 }
 
+.filler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 5rem;
+}
+
 /* Card styles */
 .cardlist {
   border: 3px solid var(--contrast-color, black);

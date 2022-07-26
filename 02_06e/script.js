@@ -1,3 +1,9 @@
+/**
+ * Laxy-Load content on scroll.
+ * References:
+ * - https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+ */
+
 import data from "./data.js";
 import Cardlist from "./components/Cardlist.js";
 
