@@ -23,7 +23,7 @@ const tempTranslator = (temp, unit) => {
   }
 };
 
-const weatherCard = (data) => {
+const weatherCard = (data, units) => {
   return `
     <article class="weathercard">
           <div class="weathercard__meta">
@@ -32,9 +32,9 @@ const weatherCard = (data) => {
   }</div>
           </div>
           <div class="weathercard__temp">
-            <span class="temp">${tempTranslator(data.main.temp).c.toFixed(
-              1
-            )}</span><span class="tempunit">°C</span>
+            <span class="temp">${
+              tempTranslator(data.main.temp).c.toFixed(1)
+            }</span><span class="tempunit">°C</span>
           </div>
           <div class="weathercard__wind">
             <div class="weathercard__wind-speed">
