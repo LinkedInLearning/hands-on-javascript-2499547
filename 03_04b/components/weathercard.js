@@ -1,11 +1,26 @@
-const tempTranslator = (temp) => {
+const tempTranslator = (temp, unit) => {
   const allTemps = {
-    k: temp,
-    c: temp - 273,
-    f: 1.8 * (temp - 273) + 32,
+    k: {
+      value: temp,
+      unit: "°k",
+    },
+    c: {
+      value: temp - 273,
+      unit: "°C",
+    },
+    f: {
+      value: 1.8 * (temp - 273) + 32,
+      unit: "°F",
+    },
   };
   console.log(allTemps);
-  return allTemps;
+  if (unit === "metric") {
+    return allTemps.c;
+  } else if (unit === "imperial") {
+    return allTemps.f;
+  } else {
+    return allTemps.k;
+  }
 };
 
 const weatherCard = (data) => {
