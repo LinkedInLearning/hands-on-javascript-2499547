@@ -15,7 +15,7 @@ const windDir = document.querySelector(".getWDir");
 
 const displayData = () => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=burnaby,ca&APPID=${settings.appid}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${settings.location}&appid=${settings.appid}`
   )
     .then(function (response) {
       return response.json();
