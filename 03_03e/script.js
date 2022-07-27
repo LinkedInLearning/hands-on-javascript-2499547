@@ -1,8 +1,8 @@
 /**
  * Create a component to display weather data.
- * - Build a new component in a ./components folder
- * - Migrate the HTML output from index.html to the new component.
+ * - Use the new component in the ./components folder
  * - Modify the fetch query to call the component.
+ * - Convert the temperature to metric and fahrenheit
  */
 
 import settings from "../settings.js";

@@ -1,8 +1,8 @@
 /**
  * Create a component to display weather data.
- * - Build a new component in a ./components folder
- * - Migrate the HTML output from index.html to the new component.
+ * - Use the new component in the ./components folder
  * - Modify the fetch query to call the component.
+ * - Convert the temperature to metric and fahrenheit
  */
 
 import settings from "../settings.js";
@@ -13,7 +13,7 @@ const windDir = document.querySelector(".getWDir");
 
 const displayData = () => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=burnaby,ca&APPID=${settings.appid}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${settings.location}&appid=${settings.appid}`
   )
     .then(function (response) {
       return response.json();
