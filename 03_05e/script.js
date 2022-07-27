@@ -11,7 +11,7 @@ import weatherCard from "./components/weathercard.js";
 const mainContent = document.querySelector(".main-content");
 const locationForm = document.querySelector(".locationform");
 const formInput = document.querySelector("#location");
-let currentLoc = settings.location;
+let location = settings.location;
 let units = settings.units;
 const errorMsg = document.querySelector(".error");
 
@@ -20,15 +20,15 @@ locationForm.addEventListener("submit", (event) => {
   event.preventDefault();
   errorMsg.classList.add("hidden");
   console.log(formInput.value);
-  currentLoc = formInput.value;
-  displayData(currentLoc, units);
+  location = formInput.value;
+  displayData(location, units);
 });
 
 const unitChanger = () => {
   const unitsButton = document.querySelector("#units");
   unitsButton.addEventListener("click", () => {
     units === "metric" ? (units = "imperial") : (units = "metric");
-    displayData(currentLoc, units);
+    displayData(location, units);
   });
 };
 
@@ -71,4 +71,4 @@ async function displayData(location, units) {
   }
 }
 
-displayData(currentLoc, units);
+displayData(location, units);
