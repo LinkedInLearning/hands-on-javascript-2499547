@@ -11,7 +11,7 @@ import weatherCard from "./components/weathercard.js";
 const mainContent = document.querySelector(".main-content");
 const locationForm = document.querySelector(".locationform");
 const formInput = document.querySelector("#location");
-let currentLoc = settings.location;
+let location = settings.location;
 let units = settings.units;
 const errorMsg = document.querySelector(".error");
 
@@ -20,8 +20,8 @@ locationForm.addEventListener("submit", (event) => {
   event.preventDefault();
   errorMsg.classList.add("hidden");
   console.log(formInput.value);
-  currentLoc = formInput.value;
-  displayData(currentLoc, units);
+  location = formInput.value;
+  displayData(location, units);
 });
 
 const unitChanger = () => {
@@ -32,9 +32,9 @@ const unitChanger = () => {
   });
 };
 
-async function displayData(currentLoc, units) {
+async function displayData(location, units) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${currentLoc}&APPID=${settings.appid}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${settings.appid}`
   )
     .then(function (response) {
       return response.json();
@@ -48,4 +48,4 @@ async function displayData(currentLoc, units) {
     });
 }
 
-displayData(currentLoc, units);
+displayData(location, units);
