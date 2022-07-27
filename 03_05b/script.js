@@ -32,7 +32,7 @@ const unitChanger = () => {
   });
 };
 
-async function displayData(units) {
+async function displayData(currentLoc, units) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${currentLoc}&APPID=${settings.appid}`
   )
@@ -48,4 +48,4 @@ async function displayData(units) {
     });
 }
 
-displayData(units);
+displayData(currentLoc, units);
