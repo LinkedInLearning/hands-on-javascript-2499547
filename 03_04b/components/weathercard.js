@@ -23,7 +23,7 @@ const tempTranslator = (temp, unit) => {
   }
 };
 
-const weatherCard = (data, units) => {
+const weatherCard = (data) => {
   return `
     <article class="weathercard">
           <div class="weathercard__meta">
