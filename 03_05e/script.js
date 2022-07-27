@@ -15,6 +15,7 @@ let currentLoc = settings.location;
 let units = settings.units;
 const errorMsg = document.querySelector(".error");
 
+// Caputre location form submit
 locationForm.addEventListener("submit", (event) => {
   event.preventDefault();
   errorMsg.classList.add("hidden");

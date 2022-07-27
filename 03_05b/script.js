@@ -9,7 +9,20 @@ import settings from "../settings.js";
 import weatherCard from "./components/weathercard.js";
 
 const mainContent = document.querySelector(".main-content");
+const locationForm = document.querySelector(".locationform");
+const formInput = document.querySelector("#location");
+let currentLoc = settings.location;
 let units = settings.units;
+const errorMsg = document.querySelector(".error");
+
+// Caputre location form submit
+locationForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  errorMsg.classList.add("hidden");
+  console.log(formInput.value);
+  currentLoc = formInput.value;
+  displayData(currentLoc, units);
+});
 
 const unitChanger = () => {
   const unitsButton = document.querySelector("#units");
@@ -21,10 +34,7 @@ const unitChanger = () => {
 
 async function displayData(units) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=carpinteria,ca,us&APPID=${settings.appid}`,
-    {
-      method: "GET",
-    }
+    `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${settings.appid}`
   )
     .then(function (response) {
       return response.json();
