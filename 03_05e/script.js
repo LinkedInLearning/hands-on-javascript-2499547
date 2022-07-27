@@ -34,7 +34,7 @@ const unitChanger = () => {
 
 async function displayData(location, units) {
   const currentLoc = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&APPID=${settings.appid}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&APPID=${settings.appid}`
   )
     .then((response) => response.json())
     .then(function (data) {
