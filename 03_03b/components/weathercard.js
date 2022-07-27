@@ -7,7 +7,9 @@ const weatherCard = (data) => {
   }</div>
           </div>
           <div class="weathercard__temp">
-            <span class="temp">${data.main.temp}</span><span class="tempunit">°C</span>
+            <span class="temp">${
+              data.main.temp
+            }</span><span class="tempunit">°C</span>
           </div>
           <div class="weathercard__wind">
             <div class="weathercard__wind-speed">
