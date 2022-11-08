@@ -1,5 +1,5 @@
 # Hands-On Introduction: JavaScript 
-This is the repository for the LinkedIn Learning course Hands-On Introduction: JavaScript . The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course Hands-On Introduction: JavaScript. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![Hands-On Introduction: JavaScript ][lil-thumbnail-url]
 
