@@ -21,7 +21,7 @@ const unitChanger = () => {
 
 async function displayData(units) {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=49.2194636514848&lon=-122.96519638087379&APPID=${settings.appid}`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${settings.location}&APPID=${settings.appid}`,
     {
       method: "GET",
     }
