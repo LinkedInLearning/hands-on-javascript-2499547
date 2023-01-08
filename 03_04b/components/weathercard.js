@@ -23,6 +23,25 @@ const tempTranslator = (temp, unit) => {
   }
 };
 
+const speedTranslator = (speed, unit) => {
+  const allSpeeds = {
+    m: {
+      value: speed,
+      unit: "m/s",
+    },
+    f: {
+      value: speed * 3.28084,
+      unit: "ft/s",
+    },
+  };
+  console.log(allSpeeds);
+  if (unit === "imperial") {
+    return allSpeeds.f;
+  } else {
+    return allSpeeds.m;
+  }
+};
+
 const weatherCard = (data, units) => {
   return `
     <article class="weathercard">
@@ -41,9 +60,15 @@ const weatherCard = (data, units) => {
           </div>
           <div class="weathercard__wind">
             <div class="weathercard__wind-speed">
-              <span class="speed">${
-                data.wind.speed
-              }</span><span class="windunit">m/s</span>
+              <span class="speed">${speedTranslator(
+                data.wind.speed,
+                units
+              ).value.toFixed(
+                1
+              )}</span><span class="windunit">${speedTranslator(
+    data.wind.speed,
+    units
+  ).unit}</span>
             </div>
             <div class="weathercard__wind-dir" style="transform:rotate(${
               data.wind.deg + 90
