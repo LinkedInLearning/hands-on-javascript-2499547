@@ -5,16 +5,22 @@
  * - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
  */
 
-import data from "./data.js";
+import data from "./data.js"; // Import API data from data.js
 
-const mainContent = document.querySelector(".main-content");
-
+const mainContent = document.querySelector(".main-content"); // Selects main article element
 
 const Card = (data) => {
-  const imgData = data[0];
-  const date = new Date(imgData.created_at);
+    // Creates a function to create the card
+    const imgData = data[0]; // Selects the first image from the data array
+    const date = new Date(imgData.created_at); // Creates a new date object from the image date
 
-  const markup = `
+    /**
+     * Creates a template literal to create the card markup.
+     * The template literal uses the data from the API to create the card.
+     * The template literal also uses the date object to create the date.
+     * The template literal uses the toLocaleString() method to format the date.
+     */
+    const markup = `
     <figure class="image">
       <img
         srcset="
@@ -40,9 +46,9 @@ const Card = (data) => {
             Photo by
             <time class="image__time" datetime="${imgData.created_at}">
             ${date.toLocaleString("default", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
             })}
             </time>.
           </p>
@@ -56,7 +62,7 @@ const Card = (data) => {
     </figure>
   `;
 
-  mainContent.innerHTML = markup;
+    mainContent.innerHTML = markup; // Adds the markup to the main article element
 };
 
-Card(data);
+Card(data); // Calls the Card function and passes the data as an argument to the function to create the card markup and add it to the page when the page loads for the first time (when the script is run)
