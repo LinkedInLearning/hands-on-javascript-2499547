@@ -1,0 +1,128 @@
+@import '@fontsource-variable/inter/index.css';
+@import '@fontsource-variable/space-grotesk/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #080806;
+    color: #F5F1EA;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-ink font-sans text-cream antialiased;
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { @apply font-display; }
+  main > section { overflow-x: clip; }
+  ::selection { background: #C8A76B; color: #080806; }
+  :focus-visible {
+    outline: 2px solid #C8A76B;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  @media (min-width: 768px) {
+    .container-site {
+      padding-left: max(2rem, env(safe-area-inset-left));
+      padding-right: max(2rem, env(safe-area-inset-right));
+    }
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(100deg, #E8D3A6 0%, #D9BE8A 45%, #C8A76B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200, 167, 107, 0.55), transparent);
+  }
+
+  /* Near-black sections lit by soft radial gradients */
+  .glow-forest {
+    background:
+      radial-gradient(60% 50% at 15% 20%, rgba(20, 43, 36, 0.85), transparent 70%),
+      radial-gradient(40% 40% at 90% 80%, rgba(200, 167, 107, 0.08), transparent 70%),
+      #080806;
+  }
+  .glow-gold {
+    background:
+      radial-gradient(50% 45% at 85% 15%, rgba(200, 167, 107, 0.12), transparent 70%),
+      radial-gradient(55% 50% at 10% 90%, rgba(20, 43, 36, 0.75), transparent 70%),
+      #080806;
+  }
+  .glow-center {
+    background:
+      radial-gradient(55% 50% at 50% 0%, rgba(20, 43, 36, 0.9), transparent 75%),
+      #080806;
+  }
+
+  .hairline { border-color: rgba(200, 167, 107, 0.18); }
+
+  .placeholder-box {
+    background:
+      radial-gradient(80% 80% at 50% 0%, rgba(20, 43, 36, 0.7), transparent 70%),
+      repeating-linear-gradient(135deg, rgba(200,167,107,0.04) 0 2px, transparent 2px 14px),
+      #101010;
+  }
+
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  .field {
+    @apply block w-full rounded-xl border bg-matte/80 px-4 py-3 text-base text-cream placeholder:text-cream/45;
+    border-color: rgba(245, 241, 234, 0.16);
+    min-height: 3rem;
+  }
+  .field:focus-visible { outline-offset: 1px; border-color: #C8A76B; }
+  .field[aria-invalid='true'] { border-color: #F2A38F; }
+  select.field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23C8A76B' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Fade-up on scroll: only hides content when JS is running and motion is allowed */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .lift { transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+  .lift:hover { transform: translateY(-2px); }
+}
