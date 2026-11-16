@@ -102,8 +102,14 @@ export const VENUES = [
     'A stadium lit up at night, with the city skyline behind the field',
     'center 52%'
   ),
+  venue(
+    'hotel',
+    'Hotels',
+    'Fresh coffee for guests at any hour, with no extra staff.',
+    'A bright hotel lobby with lounge chairs, potted palms and polished marble floors',
+    'center 50%'
+  ),
   venue('office', 'Offices', 'Café-quality coffee for your team without leaving the floor.', 'A modern office'),
-  venue('hotel', 'Hotels', 'Fresh coffee for guests at any hour, with no extra staff.', 'A hotel lobby'),
 ];
 
 export const INQUIRY_TYPES = [
