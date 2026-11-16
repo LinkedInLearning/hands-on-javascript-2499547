@@ -37,6 +37,14 @@ Each image is served in three widths: `public/img/<name>-480.webp`, `-960.webp` 
 
 Until an image exists, a dark labelled placeholder is shown in its place.
 
+`bean-kiosk-render.png` is a cut-out (transparent background) so the kiosk sits directly on the page's
+near-black background. Replace it with another transparent PNG to keep that look.
+
+## Colours
+
+The palette is limited to four colours: `#080806` (background), `#C8A76B` (gold), `#E8D3A6` (light gold)
+and `#F5F1EA` (text). Card fills, borders and glows are translucent tints of these.
+
 ## Content
 
 Copy for the menu, features, venues and form options is in `src/data/content.js`.

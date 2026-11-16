@@ -34,7 +34,7 @@ export default function Origin() {
   };
 
   return (
-    <section id="coffee" aria-labelledby="coffee-title" className="glow-forest relative py-24 md:py-32">
+    <section id="coffee" aria-labelledby="coffee-title" className="glow-left relative py-24 md:py-32">
       <div className="container-site">
         <SectionHeading
           eyebrow="02 — The origin"

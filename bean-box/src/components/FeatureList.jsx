@@ -7,7 +7,7 @@ export default function FeatureList({ items, className = '' }) {
       {items.map((item, i) => (
         <li
           key={item.title}
-          className="reveal relative rounded-2xl border border-cream/[0.07] bg-graphite px-7 pb-9 pt-12 text-center"
+          className="reveal relative rounded-2xl border border-cream/[0.07] bg-cream/[0.035] px-7 pb-9 pt-12 text-center"
           style={{ '--reveal-delay': `${i * 80}ms` }}
         >
           <span aria-hidden="true" className="absolute left-6 top-5 font-display text-sm tracking-[0.15em] text-gold">

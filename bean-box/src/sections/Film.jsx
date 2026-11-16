@@ -20,7 +20,7 @@ export default function Film() {
   return (
     <section id="film" aria-labelledby="film-title" className="bg-ink py-12 md:py-20">
       <div className="container-site">
-        <div className="reveal relative overflow-hidden rounded-3xl border border-cream/[0.07] bg-graphite">
+        <div className="reveal relative overflow-hidden rounded-3xl border border-cream/[0.07] bg-cream/[0.035]">
           {playing && embed ? (
             <div className="relative aspect-video">
               <h2 id="film-title" className="sr-only">

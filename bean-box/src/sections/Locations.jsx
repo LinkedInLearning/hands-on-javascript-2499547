@@ -31,7 +31,7 @@ export default function Locations() {
                 className="reveal w-[80%] shrink-0 snap-start sm:w-[55%] md:w-auto"
                 style={{ '--reveal-delay': `${i * 60}ms` }}
               >
-                <article className="lift flex h-full flex-col overflow-hidden rounded-2xl border border-cream/[0.07] bg-graphite/90 backdrop-blur hover:border-gold/30 md:flex-row-reverse md:items-center md:gap-6 md:p-5">
+                <article className="lift flex h-full flex-col overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/[0.035] backdrop-blur hover:border-gold/30 md:flex-row-reverse md:items-center md:gap-6 md:p-5">
                   <Img
                     src={v.src}
                     alt={v.alt}

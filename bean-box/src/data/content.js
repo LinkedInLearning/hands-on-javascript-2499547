@@ -9,7 +9,7 @@ export const NAV = [
 export const IMAGES = {
   render: {
     src: '/img/bean-kiosk-render',
-    alt: 'The Bean Box kiosk in forest green and gold, with an illuminated sign, robot arm, touchscreen and bean hopper',
+    alt: 'The Bean Box kiosk in deep green and gold: an illuminated sign, a white robot arm beside the touchscreen, a glass hopper full of coffee beans and the words Grown in Rwanda',
   },
   concept: {
     src: '/img/bean-kiosk-concept',

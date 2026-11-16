@@ -101,7 +101,7 @@ function Field({ id, label, required, error, hint, children }) {
         </p>
       )}
       {error && (
-        <p id={`${id}-error`} className="mt-1.5 text-sm text-[#F2A38F]">
+        <p id={`${id}-error`} className="mt-1.5 text-sm text-[#E8D3A6]">
           {error}
         </p>
       )}
@@ -223,7 +223,7 @@ export default function InquiryForm() {
         ref={statusRef}
         tabIndex={-1}
         role="status"
-        className="flex min-h-[28rem] flex-col items-center justify-center rounded-3xl border border-gold/25 bg-matte/80 p-8 text-center"
+        className="flex min-h-[28rem] flex-col items-center justify-center rounded-3xl border border-gold/25 bg-cream/[0.04] p-8 text-center"
       >
         <span className="grid h-14 w-14 place-items-center rounded-full border border-gold/50 text-gold">
           <Icon name="check" className="h-7 w-7" strokeWidth={1.8} />
@@ -251,7 +251,7 @@ export default function InquiryForm() {
       noValidate
       onSubmit={onSubmit}
       aria-busy={loading}
-      className="rounded-3xl border border-cream/10 bg-matte/80 p-5 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur sm:p-8"
+      className="rounded-3xl border border-cream/10 bg-cream/[0.04] p-5 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur sm:p-8"
     >
       <fieldset aria-describedby={visibleError('type') ? `${id('type')}-error` : undefined}>
         <legend className="font-display text-lg font-medium text-cream">
@@ -274,7 +274,7 @@ export default function InquiryForm() {
                 }}
                 className="peer sr-only"
               />
-              <span className="flex h-full min-h-[5.5rem] flex-col rounded-2xl border border-cream/15 bg-ink/60 p-4 transition-colors hover:border-gold/50 peer-checked:border-gold peer-checked:bg-forest/50 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gold">
+              <span className="flex h-full min-h-[5.5rem] flex-col rounded-2xl border border-cream/15 bg-ink/60 p-4 transition-colors hover:border-gold/50 peer-checked:border-gold peer-checked:bg-gold/10 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gold">
                 <span className="pr-7 font-display font-medium text-cream">{t.title}</span>
                 <span className="mt-1 text-sm text-cream/70">{t.text}</span>
               </span>
@@ -288,7 +288,7 @@ export default function InquiryForm() {
           ))}
         </div>
         {visibleError('type') && (
-          <p id={`${id('type')}-error`} className="mt-2 text-sm text-[#F2A38F]">
+          <p id={`${id('type')}-error`} className="mt-2 text-sm text-[#E8D3A6]">
             {errors.type}
           </p>
         )}
@@ -380,14 +380,14 @@ export default function InquiryForm() {
           </span>
         </label>
         {visibleError('consent') && (
-          <p id={`${id('consent')}-error`} className="mt-1.5 pl-8 text-sm text-[#F2A38F]">
+          <p id={`${id('consent')}-error`} className="mt-1.5 pl-8 text-sm text-[#E8D3A6]">
             {errors.consent}
           </p>
         )}
       </div>
 
       {status === 'error' && (
-        <div ref={statusRef} tabIndex={-1} role="alert" className="mt-6 rounded-xl border border-[#F2A38F]/40 bg-[#F2A38F]/10 p-4 text-sm text-cream">
+        <div ref={statusRef} tabIndex={-1} role="alert" className="mt-6 rounded-xl border border-[#E8D3A6]/40 bg-[#E8D3A6]/10 p-4 text-sm text-cream">
           <p className="font-medium">We couldn't send your inquiry.</p>
           <p className="mt-1 text-cream/75">
             {serverError} {config.email ? (

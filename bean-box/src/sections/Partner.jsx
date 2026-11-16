@@ -18,7 +18,7 @@ export default function Partner() {
             Buy a machine, lease one, or host one at your venue while we run it. Tell us a little about your space and
             we'll recommend the right fit.
           </p>
-          <p className="mt-8 inline-flex items-center gap-3 rounded-full border border-gold/30 bg-forest/40 px-5 py-2.5 text-sm text-gold-light">
+          <p className="mt-8 inline-flex items-center gap-3 rounded-full border border-gold/30 bg-gold/10 px-5 py-2.5 text-sm text-gold-light">
             <span aria-hidden="true" className="h-2 w-2 rounded-full bg-gold" />
             We reply within one business day
           </p>

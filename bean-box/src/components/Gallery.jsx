@@ -92,7 +92,7 @@ export default function Gallery({ items, label = 'Gallery', title }) {
                 alt={item.alt}
                 label={item.label}
                 sizes="(min-width: 1024px) 42vw, (min-width: 640px) 62vw, 86vw"
-                className="aspect-[4/5] overflow-hidden rounded-2xl border border-cream/[0.07] bg-graphite"
+                className="aspect-[4/5] overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/[0.035]"
               />
               <figcaption className="mt-4 flex gap-3 text-sm text-cream/70">
                 <span aria-hidden="true" className="font-display text-gold">{String(i + 1).padStart(2, '0')}</span>

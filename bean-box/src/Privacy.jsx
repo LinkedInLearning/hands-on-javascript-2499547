@@ -9,7 +9,7 @@ export default function Privacy() {
   return (
     <>
       <Header base="/" />
-      <main id="main" tabIndex={-1} className="glow-forest outline-none">
+      <main id="main" tabIndex={-1} className="glow-left outline-none">
         <article className="container-site max-w-3xl pb-24" style={{ paddingTop: 'calc(env(safe-area-inset-top) + 8rem)' }}>
           <Eyebrow>Legal</Eyebrow>
           <h1 className="display mt-5 text-[clamp(2.5rem,7vw,4.5rem)]">

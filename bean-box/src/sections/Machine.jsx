@@ -13,15 +13,17 @@ export default function Machine() {
       <div className="container-site">
         {/* About-style intro: portrait image fading into black, copy on the right */}
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="reveal relative">
-            <div aria-hidden="true" className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_45%_40%,rgba(20,43,36,0.9),transparent_65%)]" />
+          {/* On small screens the hero already shows the kiosk right above, so this copy is desktop-only */}
+          <div className="reveal relative hidden lg:block">
+            <div aria-hidden="true" className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_45%_40%,rgba(200,167,107,0.14),transparent_65%)]" />
             <Img
               src={IMAGES.render.src}
               alt={IMAGES.render.alt}
               sizes="(min-width: 1024px) 45vw, 100vw"
-              width={1440}
-              height={1800}
+              width={978}
+              height={1157}
               className="relative aspect-[4/5] overflow-hidden rounded-2xl"
+              imgClassName="h-full w-full object-contain"
             />
             <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink to-transparent" />
           </div>

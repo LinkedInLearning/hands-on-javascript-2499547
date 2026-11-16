@@ -4,7 +4,7 @@ import Button from './Button.jsx';
 import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
 
-export default function Header({ base = '', overLight = false }) {
+export default function Header({ base = '' }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const toggleRef = useRef(null);
@@ -61,7 +61,6 @@ export default function Header({ base = '', overLight = false }) {
   }, []);
 
   const solid = scrolled || open;
-  const light = overLight && !solid; // dark text while over the light hero
 
   return (
     <>
@@ -75,11 +74,11 @@ export default function Header({ base = '', overLight = false }) {
       <header
         className={`fixed inset-x-0 top-0 z-[60] transition-[background-color,border-color,backdrop-filter] duration-300 ${
           solid ? 'border-b border-gold/15 bg-ink/75 backdrop-blur-xl' : 'border-b border-transparent bg-transparent'
-        } ${light ? 'on-light' : ''}`}
+        }`}
         style={{ paddingTop: 'env(safe-area-inset-top)' }}
       >
         <div className="container-site flex h-16 items-center justify-between gap-6 md:h-20">
-          <Logo tone={light ? 'light' : 'dark'} />
+          <Logo />
 
           <nav aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-8">
@@ -87,9 +86,7 @@ export default function Header({ base = '', overLight = false }) {
                 <li key={l.href}>
                   <a
                     href={`${base}${l.href}`}
-                    className={`inline-flex min-h-11 items-center text-sm transition-colors ${
-                      light ? 'text-ink/75 hover:text-ink' : 'text-cream/80 hover:text-gold-light'
-                    }`}
+                    className="inline-flex min-h-11 items-center text-sm text-cream/80 transition-colors hover:text-gold-light"
                   >
                     {l.label}
                   </a>
@@ -109,9 +106,7 @@ export default function Header({ base = '', overLight = false }) {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? 'Close menu' : 'Open menu'}
-              className={`grid h-11 w-11 place-items-center rounded-full border lg:hidden ${
-                light ? 'border-ink/25 text-ink hover:border-ink' : 'border-cream/20 text-cream hover:border-gold hover:text-gold'
-              }`}
+              className="grid h-11 w-11 place-items-center rounded-full border border-cream/20 text-cream hover:border-gold hover:text-gold lg:hidden"
             >
               <Icon name={open ? 'close' : 'menu'} className="h-5 w-5" strokeWidth={1.6} />
             </button>
@@ -126,7 +121,7 @@ export default function Header({ base = '', overLight = false }) {
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
-          className="glow-forest fixed inset-0 z-[55] flex flex-col overflow-y-auto lg:hidden"
+          className="glow-left fixed inset-0 z-[55] flex flex-col overflow-y-auto lg:hidden"
           style={{
             paddingTop: 'calc(env(safe-area-inset-top) + 5.5rem)',
             paddingBottom: 'calc(env(safe-area-inset-bottom) + 2rem)',
