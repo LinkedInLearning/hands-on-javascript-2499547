@@ -20,7 +20,7 @@ The site is then live at `https://yannidus.github.io/hands-on-javascript-2499547
 
 - **Custom domain:** add it under Settings → Pages → Custom domain and point your DNS at GitHub
   (see GitHub's "Managing a custom domain" guide). The workflow picks up the new address automatically;
-  also update `VITE_SITE_URL` in `.env` for local builds.
+  also update the default `VITE_SITE_URL` in `vite.config.js` for local builds.
 - **Other hosts:** `npm run build` produces a static `dist/` folder that works on any host.
   For a sub-path, build with `BASE_PATH=/sub-path/`.
 
