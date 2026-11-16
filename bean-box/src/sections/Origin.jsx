@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import config from '../config.js';
 import Img from '../components/Img.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
-import { ORIGIN_TABS } from '../data/content.js';
+import { IMAGES, ORIGIN_TABS } from '../data/content.js';
 
 const FACTS = [
   ['region', 'Region'],
@@ -35,7 +35,21 @@ export default function Origin() {
 
   return (
     <section id="coffee" aria-labelledby="coffee-title" className="glow-left relative py-24 md:py-32">
-      <div className="container-site">
+      {/* Decorative highland backdrop behind the heading, fading into the page */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-[30rem] md:h-[36rem]">
+        <Img
+          src={IMAGES.highlands.src}
+          alt=""
+          position="center 32%"
+          sizes="100vw"
+          width={1024}
+          height={1820}
+          className="h-full w-full opacity-55"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-ink/40" />
+      </div>
+      <div className="container-site relative">
         <SectionHeading
           eyebrow="02 — The origin"
           id="coffee-title"
@@ -83,6 +97,7 @@ export default function Origin() {
             src={tab.image.src}
             alt={tab.image.alt}
             label={tab.image.label}
+            position={tab.image.position}
             sizes="(min-width: 1024px) 50vw, 100vw"
             width={1440}
             height={900}

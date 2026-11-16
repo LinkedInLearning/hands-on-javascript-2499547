@@ -17,22 +17,29 @@ export const IMAGES = {
   },
   espresso: {
     src: '/img/bean-cup-espresso',
-    alt: 'A green Bean Box cup filling under the espresso spout',
+    alt: 'A green Bean Box cup under an espresso spout, with roasted coffee beans on the drip tray',
   },
   autumn: {
     src: '/img/bean-cup-autumn',
-    alt: 'A Bean Box takeaway cup on a wooden table',
+    alt: 'A Bean Box takeaway cup on a wooden table among autumn leaves',
+    position: 'center 55%',
+  },
+  highlands: {
+    src: '/img/highlands',
+    alt: '',
   },
   farm: {
     src: '/img/rwanda-farm',
-    alt: 'Coffee farm in Rwanda',
+    alt: 'Red and green coffee cherries ripening on a hillside farm, with mountains behind',
     label: 'Rwanda farm photo',
+    position: 'center 62%',
   },
 };
 
 export const GALLERY = [
   { ...IMAGES.render, caption: 'The Bean Box: a full coffee bar behind glass.' },
-  { ...IMAGES.concept, caption: 'The arm places each finished cup on the pickup shelf.' },
+  // Add back once /img/bean-kiosk-concept is supplied:
+  // { ...IMAGES.concept, caption: 'The arm places each finished cup on the pickup shelf.' },
   { ...IMAGES.espresso, caption: 'Pulled to order, straight into a Bean Box cup.' },
   { ...IMAGES.autumn, caption: 'Take it with you, wherever the day goes.' },
 ];
@@ -141,7 +148,7 @@ export const ORIGIN_TABS = [
     label: 'The grinder',
     title: 'Ground when you order',
     text: 'Whole beans wait in the hopper. Nothing is ground until you tap your order.',
-    image: IMAGES.concept,
+    image: IMAGES.espresso,
   },
   {
     id: 'cup',

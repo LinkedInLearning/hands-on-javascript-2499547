@@ -42,7 +42,7 @@ export default function Film() {
             </div>
           ) : (
             <div className="relative grid min-h-[26rem] items-end md:aspect-[21/9] md:min-h-0 md:items-center">
-              <Img src={IMAGES.concept.src} alt="" sizes="(min-width: 1280px) 1216px, 100vw" className="absolute inset-0 opacity-50" />
+              <Img src={IMAGES.highlands.src} alt="" position="center 38%" sizes="(min-width: 1280px) 1216px, 100vw" width={1024} height={1820} className="absolute inset-0 opacity-70" />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/60 to-ink/30" />
 
               <div className="relative grid gap-8 p-7 sm:p-12 md:grid-cols-[1.2fr_auto_1fr] md:items-center md:gap-10 lg:p-16">

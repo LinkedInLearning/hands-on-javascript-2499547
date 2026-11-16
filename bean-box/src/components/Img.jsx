@@ -17,6 +17,7 @@ export default function Img({
   height = 960,
   className = '',
   imgClassName = 'h-full w-full object-cover',
+  position,
 }) {
   const [failed, setFailed] = useState(!src);
   const ref = useRef(null);
@@ -57,6 +58,7 @@ export default function Img({
         fetchpriority={priority ? 'high' : undefined}
         onError={() => setFailed(true)}
         className={imgClassName}
+        style={position ? { objectPosition: position } : undefined}
       />
     </div>
   );

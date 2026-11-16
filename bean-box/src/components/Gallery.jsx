@@ -91,6 +91,7 @@ export default function Gallery({ items, label = 'Gallery', title }) {
                 src={item.src}
                 alt={item.alt}
                 label={item.label}
+                position={item.position}
                 sizes="(min-width: 1024px) 42vw, (min-width: 640px) 62vw, 86vw"
                 className="aspect-[4/5] overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/[0.035]"
               />
