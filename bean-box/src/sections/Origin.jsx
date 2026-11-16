@@ -2,7 +2,8 @@ import { useRef, useState } from 'react';
 import config from '../config.js';
 import Img from '../components/Img.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
-import { IMAGES, ORIGIN_TABS } from '../data/content.js';
+import Eyebrow from '../components/Eyebrow.jsx';
+import { IMAGES, ORIGIN_TABS, QUESTION_COFFEE } from '../data/content.js';
 
 const FACTS = [
   ['region', 'Region'],
@@ -128,8 +129,37 @@ export default function Origin() {
               <span>
                 {String(active + 1).padStart(2, '0')} / {String(ORIGIN_TABS.length).padStart(2, '0')}
               </span>
-              <span className="text-cream/75">Rwandan coffee</span>
+              <span className="text-cream/75">Question Coffee</span>
             </div>
+          </div>
+        </div>
+        {/* Question Coffee */}
+        <div className="reveal relative mt-24 grid gap-12 overflow-hidden rounded-3xl border border-gold/20 bg-cream/[0.035] p-7 sm:p-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:p-16">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+          <div className="relative">
+            <Eyebrow>Our coffee</Eyebrow>
+            <h3 className="display mt-5 text-[clamp(2.1rem,4.2vw,3.5rem)]">
+              We serve <span className="text-gold-gradient block">Question Coffee.</span>
+            </h3>
+            <p className="mt-7 text-lg text-cream/80">{QUESTION_COFFEE.mission}</p>
+            <p className="mt-4 text-cream/65">{QUESTION_COFFEE.more}</p>
+          </div>
+          <div className="relative lg:pt-2">
+            <h4 className="font-display text-sm uppercase tracking-eyebrow text-gold">Where your money goes</h4>
+            <ol className="mt-6 space-y-4">
+              {QUESTION_COFFEE.impact.map((step, i) => (
+                <li key={step.title} className="flex gap-5 rounded-2xl border border-cream/10 bg-ink/60 p-6">
+                  <span aria-hidden="true" className="font-display text-sm tracking-[0.15em] text-gold">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <p className="font-display text-xl font-normal text-cream">{step.title}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-cream/70">{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-6 text-sm text-cream/60">Every cup you buy from The Bean Box is Question Coffee.</p>
           </div>
         </div>
       </div>

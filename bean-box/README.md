@@ -31,8 +31,8 @@ Each image is served in three widths: `public/img/<name>-480.webp`, `-960.webp` 
 | `bean-kiosk-render` | Hero, Meet The Bean Box, gallery |
 | `bean-kiosk-concept` | Gallery, product film poster |
 | `bean-cup-espresso`, `bean-cup-autumn` | Gallery |
-| `rwanda-farm` | Origin section |
-| `drink-espresso`, `drink-americano`, `drink-cappuccino`, `drink-cafe-latte`, `drink-flat-white`, `drink-mocha`, `drink-hot-chocolate` (square) | Menu |
+| `rwanda-farm` | Origin section ("The growers" tab) |
+| `highlands` | Decorative backdrop: origin heading and film banner |
 | `venue-office`, `venue-hotel`, `venue-airport`, `venue-university`, `venue-mall` (3:2) | Locations |
 
 Until an image exists, a dark labelled placeholder is shown in its place.
@@ -47,5 +47,5 @@ and `#F5F1EA` (text). Card fills, borders and glows are translucent tints of the
 
 ## Content
 
-Copy for the menu, features, venues and form options is in `src/data/content.js`.
+Copy for the menu (drink names), features, venues, Question Coffee and form options is in `src/data/content.js`.
 Before launch, set `og:image` in `index.html` to the full `https://` URL of `og-image.jpg`.

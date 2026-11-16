@@ -52,26 +52,11 @@ export const MACHINE_FEATURES = [
 
 export const MACHINE_CHIPS = ['Robotic', 'Fresh brew', 'Touch to order', 'Contactless'];
 
-const drink = (slug, name, line) => ({
-  name,
-  line,
-  src: `/img/drink-${slug}`,
-  alt: `${name} from The Bean Box`,
-  label: `${name} photo`,
-});
-
-export const MENU = [
-  drink('espresso', 'Espresso', 'A short, intense shot with a rich crema.'),
-  drink('americano', 'Americano', 'Espresso lengthened with hot water. Clean and bold.'),
-  drink('cappuccino', 'Cappuccino', 'Espresso under a deep cap of velvety foam.'),
-  drink('cafe-latte', 'Café Latte', 'Espresso and steamed milk, smooth and mellow.'),
-  drink('flat-white', 'Flat White', 'A double shot with a thin layer of silky microfoam.'),
-  drink('mocha', 'Mocha', 'Espresso, chocolate and steamed milk.'),
-  drink('hot-chocolate', 'Hot Chocolate', 'Rich, creamy and caffeine-free.'),
-];
+/** Drinks on the menu. Names only. */
+export const MENU = ['Espresso', 'Americano', 'Cappuccino', 'Café Latte', 'Flat White', 'Mocha', 'Hot Chocolate'];
 
 export const WHY = [
-  { icon: 'bean', title: 'Premium Rwandan coffee', text: 'Every cup starts with beans from Rwanda.' },
+  { icon: 'bean', title: 'Premium Rwandan coffee', text: 'We serve Question Coffee, supporting women coffee growers in Rwanda.' },
   { icon: 'robot', title: 'Fully automated', text: 'Grinding, brewing and serving run on their own.' },
   { icon: 'touch', title: 'Self-service', text: 'Guests order on the touchscreen in a few taps.' },
   { icon: 'contactless', title: 'Contactless payments', text: 'Tap a card or phone to pay. No cash to handle.' },
@@ -137,9 +122,9 @@ export const STEPS = [
 export const ORIGIN_TABS = [
   {
     id: 'farm',
-    label: 'The farm',
+    label: 'The growers',
     title: 'Grown in Rwanda',
-    text: 'Every cup from The Bean Box starts with coffee grown in Rwanda.',
+    text: 'Our coffee comes from Question Coffee, which provides a retail market for the women coffee growers enrolled in Sustainable Growers Rwanda trainings.',
     image: IMAGES.farm,
     showFacts: true,
   },
@@ -158,3 +143,17 @@ export const ORIGIN_TABS = [
     image: IMAGES.autumn,
   },
 ];
+
+/** Question Coffee: only facts supplied by Question Coffee / The Bean Box. */
+export const QUESTION_COFFEE = {
+  mission:
+    'Question Coffee is a social enterprise, with a mission to provide a retail market for the women coffee growers enrolled in Sustainable Growers Rwanda trainings.',
+  more: 'It also serves as a training space for coffee professionals, and a place for visitors to explore the world of coffee in Rwanda.',
+  impact: [
+    { title: 'To the cooperative', text: 'A share of every purchase goes directly to the cooperative, for their coffee beans.' },
+    {
+      title: 'Into training',
+      text: 'The rest is reinvested into professional training and trading programs for women coffee farmers.',
+    },
+  ],
+};
