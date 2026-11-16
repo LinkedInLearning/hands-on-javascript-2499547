@@ -43,6 +43,14 @@ const PATHS = {
       <path d="M4 7.5l8 4.5 8-4.5M12 12v9" />
     </>
   ),
+  cup: (
+    <>
+      <path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z" />
+      <path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16" />
+      <path d="M8.5 3.5c-.8 1 .8 2 0 3M12 3.5c-.8 1 .8 2 0 3" />
+    </>
+  ),
+  arrowUpRight: <path d="M7 17L17 7M9 7h8v8" />,
   play: <path d="M9 7l9 5-9 5z" fill="currentColor" stroke="none" />,
   arrowLeft: <path d="M15 5l-7 7 7 7" />,
   arrowRight: <path d="M9 5l7 7-7 7" />,

@@ -1,5 +1,5 @@
 @import '@fontsource-variable/inter/index.css';
-@import '@fontsource-variable/space-grotesk/index.css';
+@import '@fontsource-variable/outfit/index.css';
 
 @tailwind base;
 @tailwind components;
@@ -28,6 +28,8 @@
     outline-offset: 3px;
     border-radius: 4px;
   }
+  /* Darker gold focus ring where the background is light */
+  .on-light :focus-visible { outline-color: #7A5C2B; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
@@ -57,6 +59,20 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* Deeper gold for headlines on the light hero (keeps 3:1+ contrast on cream) */
+  .text-gold-deep-gradient {
+    background: linear-gradient(100deg, #9A7A3E 0%, #7A5C2B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .display {
+    @apply font-display font-light uppercase;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
   }
 
   .gold-rule {

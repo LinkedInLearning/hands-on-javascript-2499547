@@ -1,6 +1,9 @@
 const VARIANTS = {
   gold: 'bg-gold text-ink hover:bg-gold-light shadow-[0_10px_30px_-12px_rgba(200,167,107,0.7)]',
   light: 'bg-cream text-ink hover:bg-white shadow-[0_10px_30px_-14px_rgba(245,241,234,0.55)]',
+  dark: 'bg-ink text-cream hover:bg-forest shadow-[0_12px_30px_-14px_rgba(8,8,6,0.6)]',
+  outlineDark: 'border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-cream',
+  soft: 'bg-cream/10 text-cream hover:bg-cream/15 border border-cream/10',
   ghost: 'border border-cream/30 text-cream hover:border-gold hover:text-gold-light bg-ink/20 backdrop-blur-sm',
 };
 
@@ -10,7 +13,7 @@ const SIZES = {
 };
 
 export default function Button({ href, variant = 'gold', size = 'md', className = '', children, ...rest }) {
-  const cls = `lift inline-flex items-center justify-center gap-2 rounded-full font-display font-medium tracking-wide disabled:cursor-not-allowed disabled:opacity-60 ${VARIANTS[variant]} ${SIZES[size]} ${className}`;
+  const cls = `lift inline-flex items-center justify-center gap-2 rounded-full font-display font-normal tracking-[0.02em] disabled:cursor-not-allowed disabled:opacity-60 ${VARIANTS[variant]} ${SIZES[size]} ${className}`;
   if (href) {
     return (
       <a href={href} className={cls} {...rest}>

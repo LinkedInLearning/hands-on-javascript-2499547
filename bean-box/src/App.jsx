@@ -7,13 +7,14 @@ import Menu from './sections/Menu.jsx';
 import Why from './sections/Why.jsx';
 import Locations from './sections/Locations.jsx';
 import Partner from './sections/Partner.jsx';
+import Film from './sections/Film.jsx';
 import useReveal from './useReveal.js';
 
 export default function App() {
   useReveal();
   return (
     <>
-      <Header />
+      <Header overLight />
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
         <Machine />
@@ -21,6 +22,7 @@ export default function App() {
         <Menu />
         <Why />
         <Locations />
+        <Film />
         <Partner />
       </main>
       <Footer />

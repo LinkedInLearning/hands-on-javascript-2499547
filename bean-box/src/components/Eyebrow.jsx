@@ -1,8 +1,6 @@
-export default function Eyebrow({ children, className = '', as: Tag = 'p' }) {
+export default function Eyebrow({ children, className = '', tone = 'dark', as: Tag = 'p' }) {
+  const color = tone === 'light' ? 'text-gold-deep' : 'text-gold';
   return (
-    <Tag className={`flex items-center gap-3 font-display text-xs font-medium uppercase tracking-eyebrow text-gold ${className}`}>
-      <span aria-hidden="true" className="h-px w-8 bg-gold/70" />
-      {children}
-    </Tag>
+    <Tag className={`font-display text-xs font-normal uppercase tracking-eyebrow ${color} ${className}`}>{children}</Tag>
   );
 }

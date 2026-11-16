@@ -38,9 +38,9 @@ export const GALLERY = [
 ];
 
 export const MACHINE_FEATURES = [
-  { title: 'Robotic barista', text: 'Grind, brew and hand-off, fully automated.' },
-  { title: 'Fresh every cup', text: 'Made to order, never pre-poured.' },
-  { title: 'Small footprint', text: 'A full coffee bar in one compact unit.' },
+  { icon: 'robot', title: 'Robotic barista', text: 'Grind, brew and hand-off, fully automated.' },
+  { icon: 'cup', title: 'Fresh every cup', text: 'Made to order, never pre-poured.' },
+  { icon: 'box', title: 'Small footprint', text: 'A full coffee bar in one compact unit.' },
 ];
 
 export const MACHINE_CHIPS = ['Robotic', 'Fresh brew', 'Touch to order', 'Contactless'];
@@ -117,3 +117,37 @@ export const INQUIRY_TYPES = [
 
 export const LEASE_TERMS = ['Under 12 months', '12 months', '24 months', '36 months or more', 'Not sure yet'];
 export const FOOT_TRAFFIC = ['Under 200 people', '200–500 people', '500–1,000 people', '1,000–5,000 people', 'More than 5,000 people'];
+
+/** The four steps shown in the strip under the hero. */
+export const STEPS = [
+  { icon: 'touch', label: 'Order on screen' },
+  { icon: 'contactless', label: 'Pay contactless' },
+  { icon: 'robot', label: 'Watch it brew' },
+  { icon: 'cup', label: 'Take your cup' },
+];
+
+/** Origin story tabs. Keep to verified facts: the origin details live in config.origin. */
+export const ORIGIN_TABS = [
+  {
+    id: 'farm',
+    label: 'The farm',
+    title: 'Grown in Rwanda',
+    text: 'Every cup from The Bean Box starts with coffee grown in Rwanda.',
+    image: IMAGES.farm,
+    showFacts: true,
+  },
+  {
+    id: 'grinder',
+    label: 'The grinder',
+    title: 'Ground when you order',
+    text: 'Whole beans wait in the hopper. Nothing is ground until you tap your order.',
+    image: IMAGES.concept,
+  },
+  {
+    id: 'cup',
+    label: 'The cup',
+    title: 'Brewed fresh for you',
+    text: 'Made to order, never pre-poured, and handed to you by the robot arm.',
+    image: IMAGES.autumn,
+  },
+];

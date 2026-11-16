@@ -5,7 +5,7 @@ import { MENU } from '../data/content.js';
 
 export default function Menu() {
   return (
-    <section id="menu" aria-labelledby="menu-title" className="glow-center relative py-24 md:py-32">
+    <section id="menu" aria-labelledby="menu-title" className="relative bg-ink py-24 md:py-32">
       <div className="container-site">
         <SectionHeading
           eyebrow="03 — The menu"
@@ -16,7 +16,7 @@ export default function Menu() {
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {MENU.map((d, i) => (
             <li key={d.name} className="reveal" style={{ '--reveal-delay': `${(i % 4) * 70}ms` }}>
-              <Card topBorder className="lift h-full hover:border-gold/40">
+              <Card topBorder className="lift h-full hover:border-gold/30">
                 <Img
                   src={d.src}
                   alt={d.alt}
@@ -27,8 +27,8 @@ export default function Menu() {
                   className="aspect-square overflow-hidden"
                 />
                 <div className="p-6">
-                  <h3 className="font-display text-xl font-medium">{d.name}</h3>
-                  <p className="mt-2 text-cream/70">{d.line}</p>
+                  <h3 className="font-display text-xl font-normal">{d.name}</h3>
+                  <p className="mt-2 text-sm text-cream/65">{d.line}</p>
                 </div>
               </Card>
             </li>

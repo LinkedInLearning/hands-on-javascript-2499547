@@ -2,7 +2,7 @@
 export default function Card({ as: Tag = 'article', topBorder = false, className = '', children, ...rest }) {
   return (
     <Tag
-      className={`relative overflow-hidden rounded-2xl border border-cream/10 bg-matte/70 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-cream/[0.07] bg-graphite ${className}`}
       {...rest}
     >
       {topBorder && (

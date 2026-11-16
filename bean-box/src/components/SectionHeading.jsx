@@ -1,14 +1,17 @@
 import Eyebrow from './Eyebrow.jsx';
 
-export default function SectionHeading({ eyebrow, title, id, intro, align = 'left', className = '' }) {
-  const center = align === 'center';
+/** Eyebrow + thin uppercase display title. `aside` renders on the right (intro text or controls). */
+export default function SectionHeading({ eyebrow, title, id, intro, aside, className = '' }) {
   return (
-    <div className={`reveal ${center ? 'mx-auto text-center' : ''} max-w-3xl ${className}`}>
-      {eyebrow && <Eyebrow className={center ? 'justify-center' : ''}>{eyebrow}</Eyebrow>}
-      <h2 id={id} className="mt-5 text-balance font-display text-[clamp(2.25rem,5.5vw,4.25rem)] font-medium uppercase leading-[0.98] tracking-[-0.02em]">
-        {title}
-      </h2>
-      {intro && <p className={`mt-6 text-lg text-cream/75 ${center ? 'mx-auto' : ''} max-w-2xl`}>{intro}</p>}
+    <div className={`reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between ${className}`}>
+      <div className="max-w-3xl">
+        {eyebrow && <Eyebrow className="mb-5">{eyebrow}</Eyebrow>}
+        <h2 id={id} className="display text-balance text-[clamp(2.4rem,5.2vw,4.25rem)]">
+          {title}
+        </h2>
+      </div>
+      {intro && <p className="max-w-sm text-cream/65 md:pb-2">{intro}</p>}
+      {aside}
     </div>
   );
 }

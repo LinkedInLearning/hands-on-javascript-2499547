@@ -2,7 +2,10 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Img from './Img.jsx';
 import Icon from './Icon.jsx';
 
-export default function Gallery({ items, label = 'Gallery' }) {
+const arrowBtn =
+  'lift grid h-12 w-12 place-items-center rounded-full border border-cream/20 text-cream hover:border-gold hover:bg-gold hover:text-ink disabled:pointer-events-none disabled:opacity-30';
+
+export default function Gallery({ items, label = 'Gallery', title }) {
   const track = useRef(null);
   const [index, setIndex] = useState(0);
 
@@ -21,7 +24,6 @@ export default function Gallery({ items, label = 'Gallery' }) {
         best = i;
       }
     });
-    // At the far right edge, the last slide is the current one
     if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) best = items.length - 1;
     setIndex(best);
   }, [items.length]);
@@ -54,6 +56,21 @@ export default function Gallery({ items, label = 'Gallery' }) {
 
   return (
     <div role="region" aria-roledescription="carousel" aria-label={label}>
+      <div className="mb-10 flex items-end justify-between gap-6">
+        {title}
+        <div className="flex shrink-0 items-center gap-3">
+          <p className="mr-2 hidden font-display text-sm tracking-[0.2em] text-cream/65 sm:block" aria-live="polite">
+            <span className="text-gold-light">{String(index + 1).padStart(2, '0')}</span> / {String(items.length).padStart(2, '0')}
+          </p>
+          <button type="button" onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous image" className={arrowBtn}>
+            <Icon name="arrowLeft" className="h-5 w-5" strokeWidth={1.6} />
+          </button>
+          <button type="button" onClick={() => go(index + 1)} disabled={index === items.length - 1} aria-label="Next image" className={arrowBtn}>
+            <Icon name="arrowRight" className="h-5 w-5" strokeWidth={1.6} />
+          </button>
+        </div>
+      </div>
+
       <div
         ref={track}
         tabIndex={0}
@@ -67,49 +84,23 @@ export default function Gallery({ items, label = 'Gallery' }) {
             role="group"
             aria-roledescription="slide"
             aria-label={`${i + 1} of ${items.length}`}
-            className="w-[86%] shrink-0 snap-start sm:w-[72%] lg:w-[58%]"
+            className="w-[86%] shrink-0 snap-start sm:w-[62%] lg:w-[42%]"
           >
             <figure>
-            <Img
-              src={item.src}
-              alt={item.alt}
-              label={item.label}
-              sizes="(min-width: 1024px) 58vw, (min-width: 640px) 72vw, 86vw"
-              className="aspect-[3/2] overflow-hidden rounded-2xl border border-cream/10 bg-matte"
-            />
-            <figcaption className="mt-4 flex gap-3 text-sm text-cream/75">
-              <span aria-hidden="true" className="font-display text-gold">{String(i + 1).padStart(2, '0')}</span>
-              {item.caption}
-            </figcaption>
+              <Img
+                src={item.src}
+                alt={item.alt}
+                label={item.label}
+                sizes="(min-width: 1024px) 42vw, (min-width: 640px) 62vw, 86vw"
+                className="aspect-[4/5] overflow-hidden rounded-2xl border border-cream/[0.07] bg-graphite"
+              />
+              <figcaption className="mt-4 flex gap-3 text-sm text-cream/70">
+                <span aria-hidden="true" className="font-display text-gold">{String(i + 1).padStart(2, '0')}</span>
+                {item.caption}
+              </figcaption>
             </figure>
           </div>
         ))}
-      </div>
-
-      <div className="mt-6 flex items-center justify-between gap-4">
-        <p className="font-display text-sm tracking-[0.2em] text-cream/70" aria-live="polite">
-          <span className="text-gold-light">{String(index + 1).padStart(2, '0')}</span> / {String(items.length).padStart(2, '0')}
-        </p>
-        <div className="flex gap-3">
-          <button
-            type="button"
-            onClick={() => go(index - 1)}
-            disabled={index === 0}
-            aria-label="Previous image"
-            className="lift grid h-12 w-12 place-items-center rounded-full border border-gold/40 text-gold hover:border-gold hover:bg-gold hover:text-ink disabled:pointer-events-none disabled:opacity-35"
-          >
-            <Icon name="arrowLeft" className="h-5 w-5" strokeWidth={1.8} />
-          </button>
-          <button
-            type="button"
-            onClick={() => go(index + 1)}
-            disabled={index === items.length - 1}
-            aria-label="Next image"
-            className="lift grid h-12 w-12 place-items-center rounded-full border border-gold/40 text-gold hover:border-gold hover:bg-gold hover:text-ink disabled:pointer-events-none disabled:opacity-35"
-          >
-            <Icon name="arrowRight" className="h-5 w-5" strokeWidth={1.8} />
-          </button>
-        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Partner() {
           <Eyebrow>06 — Partner with us</Eyebrow>
           <h2
             id="partner-title"
-            className="mt-5 font-display text-[clamp(2.25rem,5.5vw,4.25rem)] font-medium uppercase leading-[0.98] tracking-[-0.02em]"
+            className="display mt-5 text-[clamp(2.4rem,5.2vw,4.25rem)]"
           >
             Bring The Bean Box <span className="text-gold-gradient">to your space.</span>
           </h2>
