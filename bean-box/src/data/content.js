@@ -64,20 +64,46 @@ export const WHY = [
   { icon: 'box', title: 'Compact design', text: 'A complete coffee bar in a single unit.' },
 ];
 
-const venue = (slug, name, line) => ({
+const venue = (slug, name, line, alt, position) => ({
   name,
   line,
   src: `/img/venue-${slug}`,
-  alt: `The Bean Box in a ${name.toLowerCase().replace(/s$/, '')} setting`,
+  alt,
   label: `${name} photo`,
+  position,
 });
 
 export const VENUES = [
-  venue('office', 'Offices', 'Café-quality coffee for your team without leaving the floor.'),
-  venue('hotel', 'Hotels', 'Fresh coffee for guests at any hour, with no extra staff.'),
-  venue('airport', 'Airports', 'Fast, contactless coffee for travellers on a schedule.'),
-  venue('university', 'Universities', 'Great coffee between lectures, open late for study sessions.'),
-  venue('mall', 'Shopping Malls', 'A striking attraction that turns foot traffic into sales.'),
+  venue(
+    'mall',
+    'Shopping Malls',
+    'A striking attraction that turns foot traffic into sales.',
+    'Shoppers on several levels of a busy shopping mall atrium',
+    'center 55%'
+  ),
+  venue(
+    'airport',
+    'Airports',
+    'Fast, contactless coffee for travellers on a schedule.',
+    'Travellers with suitcases walking through a bright airport terminal beside floor-to-ceiling windows',
+    'center 62%'
+  ),
+  venue(
+    'university',
+    'Universities',
+    'Great coffee between lectures, open late for study sessions.',
+    'Students studying on wide wooden steps and at tables in a university atrium',
+    'center 58%'
+  ),
+  venue(
+    'stadium',
+    'Stadiums & Arenas',
+    'Hot coffee for fans and event crowds, served fast so nobody misses the action.',
+    'A stadium lit up at night, with the city skyline behind the field',
+    'center 52%'
+  ),
+  venue('office', 'Offices', 'Café-quality coffee for your team without leaving the floor.', 'A modern office'),
+  venue('hotel', 'Hotels', 'Fresh coffee for guests at any hour, with no extra staff.', 'A hotel lobby'),
 ];
 
 export const INQUIRY_TYPES = [

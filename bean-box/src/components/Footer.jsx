@@ -76,7 +76,7 @@ export default function Footer({ base = '' }) {
               Premium Rwandan coffee. <span className="text-gold-gradient">Anytime. Anywhere.</span>
             </p>
             <p className="mt-4 max-w-sm text-sm text-cream/65">
-              Robotic coffee kiosks for offices, hotels, airports, universities and shopping malls.
+              Robotic coffee kiosks for offices, hotels, airports, universities, shopping malls and stadiums.
             </p>
             <SocialList className="mt-6" />
           </div>

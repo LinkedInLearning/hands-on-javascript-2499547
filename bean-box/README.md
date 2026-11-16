@@ -33,7 +33,7 @@ Each image is served in three widths: `public/img/<name>-480.webp`, `-960.webp` 
 | `bean-cup-espresso`, `bean-cup-autumn` | Gallery |
 | `rwanda-farm` | Origin section ("The growers" tab) |
 | `highlands` | Decorative backdrop: origin heading and film banner |
-| `venue-office`, `venue-hotel`, `venue-airport`, `venue-university`, `venue-mall` (3:2) | Locations |
+| `venue-office`, `venue-hotel`, `venue-airport`, `venue-university`, `venue-mall`, `venue-stadium` (3:2) | Locations |
 
 Until an image exists, a dark labelled placeholder is shown in its place.
 

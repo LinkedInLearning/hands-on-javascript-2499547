@@ -36,10 +36,11 @@ export default function Locations() {
                     src={v.src}
                     alt={v.alt}
                     label={v.label}
-                    sizes="(min-width: 768px) 12rem, 80vw"
+                    position={v.position}
+                    sizes="(min-width: 768px) 14rem, 80vw"
                     width={960}
                     height={640}
-                    className="aspect-[3/2] shrink-0 overflow-hidden md:w-44 md:rounded-xl"
+                    className="aspect-[3/2] shrink-0 overflow-hidden md:w-56 md:rounded-xl"
                   />
                   <div className="flex-1 p-6 md:p-1">
                     <h3 className="font-display text-xl font-normal">{v.name}</h3>
