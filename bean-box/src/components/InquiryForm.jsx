@@ -3,6 +3,7 @@ import config from '../config.js';
 import { INQUIRY_TYPES, LEASE_TERMS, FOOT_TRAFFIC } from '../data/content.js';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
+import url from '../url.js';
 
 const DRAFT_KEY = 'beanbox-inquiry-draft';
 const EMPTY = {
@@ -373,7 +374,7 @@ export default function InquiryForm() {
           />
           <span>
             I agree to The Bean Box contacting me about this inquiry and to the{' '}
-            <a href="/privacy.html" className="text-gold-light underline decoration-gold/50 underline-offset-4 hover:text-gold">
+            <a href={url('/privacy.html')} className="text-gold-light underline decoration-gold/50 underline-offset-4 hover:text-gold">
               privacy policy
             </a>
             .<span className="text-gold" aria-hidden="true"> *</span>

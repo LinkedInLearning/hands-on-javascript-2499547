@@ -3,12 +3,13 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Eyebrow from './components/Eyebrow.jsx';
 import useReveal from './useReveal.js';
+import url from './url.js';
 
 export default function Privacy() {
   useReveal();
   return (
     <>
-      <Header base="/" />
+      <Header base={url('/')} />
       <main id="main" tabIndex={-1} className="glow-left outline-none">
         <article className="container-site max-w-3xl pb-24" style={{ paddingTop: 'calc(env(safe-area-inset-top) + 8rem)' }}>
           <Eyebrow>Legal</Eyebrow>
@@ -55,13 +56,13 @@ export default function Privacy() {
             </section>
           </div>
           <p className="mt-14">
-            <a href="/" className="inline-flex min-h-11 items-center text-gold-light underline underline-offset-4 hover:text-gold">
+            <a href={url('/')} className="inline-flex min-h-11 items-center text-gold-light underline underline-offset-4 hover:text-gold">
               ← Back to The Bean Box
             </a>
           </p>
         </article>
       </main>
-      <Footer base="/" />
+      <Footer base={url('/')} />
     </>
   );
 }

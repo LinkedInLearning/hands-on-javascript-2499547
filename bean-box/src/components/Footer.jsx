@@ -2,6 +2,7 @@ import config from '../config.js';
 import { NAV } from '../data/content.js';
 import Logo from './Logo.jsx';
 import { SocialList } from './Contact.jsx';
+import url from '../url.js';
 
 const heading = 'font-display text-sm font-normal text-cream';
 const linkCls = 'inline-flex min-h-11 items-center text-sm text-cream/65 hover:text-gold-light';
@@ -57,7 +58,7 @@ export default function Footer({ base = '' }) {
                 </a>
               </li>
               <li>
-                <a href="/privacy.html" className={linkCls}>
+                <a href={url('/privacy.html')} className={linkCls}>
                   Privacy
                 </a>
               </li>

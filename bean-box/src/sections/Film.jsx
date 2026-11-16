@@ -3,6 +3,7 @@ import config from '../config.js';
 import Icon from '../components/Icon.jsx';
 import Img from '../components/Img.jsx';
 import { IMAGES } from '../data/content.js';
+import url from '../url.js';
 
 function embedFor(url) {
   const yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/);
@@ -15,7 +16,8 @@ function embedFor(url) {
 /** Full-width product film banner. Without config.filmUrl it reads "Film coming soon". */
 export default function Film() {
   const [playing, setPlaying] = useState(false);
-  const embed = config.filmUrl ? embedFor(config.filmUrl) : null;
+  const embed = config.filmUrl ? embedFor(url(config.filmUrl)) : null;
+  const poster = url(config.filmPoster);
 
   return (
     <section id="film" aria-labelledby="film-title" className="bg-ink py-12 md:py-20">
@@ -37,7 +39,7 @@ export default function Film() {
               ) : (
                 <video
                   src={embed.src}
-                  poster={config.filmPoster || undefined}
+                  poster={poster || undefined}
                   controls
                   autoPlay
                   playsInline
@@ -50,9 +52,9 @@ export default function Film() {
             </div>
           ) : (
             <div className="relative grid min-h-[26rem] items-end md:aspect-[21/9] md:min-h-0 md:items-center">
-              {config.filmPoster ? (
+              {poster ? (
                 <img
-                  src={config.filmPoster}
+                  src={poster}
                   alt=""
                   loading="lazy"
                   decoding="async"

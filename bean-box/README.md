@@ -9,6 +9,21 @@ npm run build     # production build in dist/ (index.html + privacy.html)
 npm run preview   # serve the build
 ```
 
+## Hosting (GitHub Pages)
+
+`.github/workflows/deploy-bean-box.yml` builds this folder and publishes it to GitHub Pages
+whenever `bean-box/` changes on `main` (or when run by hand from the Actions tab).
+
+One-time setup: repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+The site is then live at `https://yannidus.github.io/hands-on-javascript-2499547/`.
+
+- **Custom domain:** add it under Settings → Pages → Custom domain and point your DNS at GitHub
+  (see GitHub's "Managing a custom domain" guide). The workflow picks up the new address automatically;
+  also update `VITE_SITE_URL` in `.env` for local builds.
+- **Other hosts:** `npm run build` produces a static `dist/` folder that works on any host.
+  For a sub-path, build with `BASE_PATH=/sub-path/`.
+
 ## Settings
 
 Everything you edit is in `src/config.js`: contact email, phone, location, social links, form endpoint,

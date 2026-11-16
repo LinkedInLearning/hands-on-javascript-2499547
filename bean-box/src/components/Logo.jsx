@@ -1,9 +1,10 @@
 import Icon from './Icon.jsx';
+import url from '../url.js';
 
 export default function Logo({ className = '' }) {
   return (
     <a
-      href="/#top"
+      href={`${url('/')}#top`}
       className={`inline-flex min-h-11 items-center gap-2.5 font-display text-[0.95rem] font-normal uppercase tracking-logo text-cream ${className}`}
     >
       <span aria-hidden="true" className="grid h-8 w-8 place-items-center rounded-full border border-gold/40 text-gold">

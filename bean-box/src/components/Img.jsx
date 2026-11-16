@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import url from '../url.js';
 
 const WIDTHS = [480, 960, 1440];
 
@@ -27,6 +28,8 @@ export default function Img({
     if (el && el.complete && el.naturalWidth === 0) setFailed(true);
   }, []);
 
+  const base = url(src);
+
   if (failed) {
     if (alt === '') return <div aria-hidden="true" className={`placeholder-box ${className}`} />;
     return (
@@ -47,8 +50,8 @@ export default function Img({
     <div className={className}>
       <img
         ref={ref}
-        src={`${src}-960.webp`}
-        srcSet={WIDTHS.map((w) => `${src}-${w}.webp ${w}w`).join(', ')}
+        src={`${base}-960.webp`}
+        srcSet={WIDTHS.map((w) => `${base}-${w}.webp ${w}w`).join(', ')}
         sizes={sizes}
         alt={alt}
         width={width}
