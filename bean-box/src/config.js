@@ -25,9 +25,11 @@ const config = {
   // Parent brand site, used in the footer ("A Ravens Tech machine")
   ravensUrl: '',
 
-  // Product film: a YouTube / Vimeo URL or a direct .mp4/.webm file.
+  // Film: a YouTube / Vimeo URL or a direct .mp4/.webm file (files in /public/film are served at /film/...).
   // Empty shows "Film coming soon".
-  filmUrl: '',
+  filmUrl: '/film/barista-competition.mp4',
+  // Still image shown before the film plays (optional; used for direct video files)
+  filmPoster: '/film/barista-competition-poster.webp',
 
   // Coffee origin facts. Fill in with verified details only; empty rows are hidden.
   origin: {

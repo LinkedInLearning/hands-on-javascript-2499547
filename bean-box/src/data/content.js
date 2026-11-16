@@ -109,7 +109,13 @@ export const VENUES = [
     'A bright hotel lobby with lounge chairs, potted palms and polished marble floors',
     'center 50%'
   ),
-  venue('office', 'Offices', 'Café-quality coffee for your team without leaving the floor.', 'A modern office'),
+  venue(
+    'office',
+    'Offices',
+    'Café-quality coffee for your team without leaving the floor.',
+    'A bright office building lobby with lounge chairs and a marble reception desk',
+    'center 60%'
+  ),
 ];
 
 export const INQUIRY_TYPES = [

@@ -16,7 +16,8 @@ Ravens Tech URL, product film URL and the coffee origin facts. An empty value hi
 
 - `formEndpoint` set (Formspree-compatible): the inquiry form POSTs JSON there.
 - `formEndpoint` empty: the form opens a pre-filled email to `email`.
-- `filmUrl`: a YouTube or Vimeo link, or a direct `.mp4`/`.webm`. Empty shows "Film coming soon".
+- `filmUrl`: a YouTube or Vimeo link, or a direct `.mp4`/`.webm` (put files in `public/film/`). Empty shows "Film coming soon".
+- `filmPoster`: the still shown before a direct video file plays.
 - `origin`: region, altitude, cooperative and roaster. Each row appears only once it has a value.
 
 ## Images

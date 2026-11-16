@@ -53,7 +53,7 @@ export default function Footer({ base = '' }) {
             <ul className="mt-1">
               <li>
                 <a href={`${base}#film`} className={linkCls}>
-                  Product film
+                  The film
                 </a>
               </li>
               <li>

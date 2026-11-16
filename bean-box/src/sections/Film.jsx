@@ -24,37 +24,58 @@ export default function Film() {
           {playing && embed ? (
             <div className="relative aspect-video">
               <h2 id="film-title" className="sr-only">
-                Product film
+                The Bean Box barista competition film
               </h2>
               {embed.kind === 'iframe' ? (
                 <iframe
                   src={embed.src}
-                  title="The Bean Box product film"
+                  title="The Bean Box barista competition film"
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   allowFullScreen
                   className="absolute inset-0 h-full w-full"
                 />
               ) : (
-                <video src={embed.src} controls autoPlay playsInline className="absolute inset-0 h-full w-full bg-black object-contain">
+                <video
+                  src={embed.src}
+                  poster={config.filmPoster || undefined}
+                  controls
+                  autoPlay
+                  playsInline
+                  aria-label="The Blind Barista Challenge at Question Coffee"
+                  className="absolute inset-0 h-full w-full bg-black object-contain"
+                >
                   Your browser cannot play this video.
                 </video>
               )}
             </div>
           ) : (
             <div className="relative grid min-h-[26rem] items-end md:aspect-[21/9] md:min-h-0 md:items-center">
-              <Img src={IMAGES.highlands.src} alt="" position="center 38%" sizes="(min-width: 1280px) 1216px, 100vw" width={1024} height={1820} className="absolute inset-0 opacity-70" />
+              {config.filmPoster ? (
+                <img
+                  src={config.filmPoster}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width={1024}
+                  height={576}
+                  className="absolute inset-0 h-full w-full object-cover opacity-75"
+                  style={{ objectPosition: '30% 50%' }}
+                />
+              ) : (
+                <Img src={IMAGES.highlands.src} alt="" position="center 38%" sizes="(min-width: 1280px) 1216px, 100vw" width={1024} height={1820} className="absolute inset-0 opacity-70" />
+              )}
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/60 to-ink/30" />
 
               <div className="relative grid gap-8 p-7 sm:p-12 md:grid-cols-[1.2fr_auto_1fr] md:items-center md:gap-10 lg:p-16">
                 <h2 id="film-title" className="display text-[clamp(2.5rem,6vw,5rem)]">
-                  See it <span className="text-gold-gradient block">in motion.</span>
+                  Crafted for <span className="text-gold-gradient block">every season.</span>
                 </h2>
                 <div className="flex md:justify-center">
                   {embed ? (
                     <button
                       type="button"
                       onClick={() => setPlaying(true)}
-                      aria-label="Play the product film"
+                      aria-label="Play the barista competition film"
                       className="lift grid h-20 w-20 place-items-center rounded-full bg-cream/15 text-cream backdrop-blur hover:bg-gold hover:text-ink"
                     >
                       <Icon name="play" className="ml-1 h-7 w-7" />
@@ -67,9 +88,12 @@ export default function Film() {
                 </div>
                 <div className="max-w-xs text-sm text-cream/75">
                   <p className="font-display text-xs uppercase tracking-eyebrow text-gold">
-                    {embed ? 'Product film' : 'Film coming soon'}
+                    {embed ? 'The Blind Barista Challenge · 1 min' : 'Film coming soon'}
                   </p>
-                  <p className="mt-3">The Bean Box at work, from your order on the touchscreen to the hand-off of a fresh cup.</p>
+                  <p className="mt-3">
+                    At our barista competition at Question Coffee, the Blind Barista Challenge, baristas created signature coffees for The Bean Box, one
+                    for each of the four seasons.
+                  </p>
                 </div>
               </div>
             </div>
