@@ -17,6 +17,10 @@
     --c-accent: 201 169 110; /* gold #C9A96E: hairlines, labels, numbers */
     --c-hi: 201 169 110; /* gold */
   }
+  /* The kiosk's body green, used for the hero */
+  .tone-machine {
+    --c-bg: 24 36 32; /* #182420 */
+  }
   .tone-light {
     --c-bg: 200 197 165; /* sage */
     --c-fg: 18 33 28; /* forest */
