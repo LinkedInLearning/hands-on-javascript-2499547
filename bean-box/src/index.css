@@ -205,3 +205,22 @@
   .lift { transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
   .lift:hover { transform: translateY(-2px); }
 }
+
+/* Bean pattern on sage: same drawing, softer, layered under the sheen */
+.tone-light.bean-bg {
+  isolation: isolate;
+  background:
+    radial-gradient(70% 60% at 15% 10%, rgb(255 255 255 / 0.28), transparent 65%),
+    radial-gradient(60% 60% at 90% 100%, rgb(59 42 38 / 0.08), transparent 70%),
+    rgb(var(--c-bg));
+}
+.tone-light.bean-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--bean);
+  background-size: 340px 360px;
+  opacity: 0.26;
+}
