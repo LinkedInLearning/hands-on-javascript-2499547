@@ -1,11 +1,12 @@
 import config from '../config.js';
 import { NAV } from '../data/content.js';
 import Logo from './Logo.jsx';
+import BeanWatermark from './BeanWatermark.jsx';
 import { SocialList } from './Contact.jsx';
 import url from '../url.js';
 
-const heading = 'font-display text-sm font-normal text-cream';
-const linkCls = 'inline-flex min-h-11 items-center text-sm text-cream/65 hover:text-gold-light';
+const heading = 'font-display text-sm font-normal text-fg';
+const linkCls = 'inline-flex min-h-11 items-center text-sm text-fg/65 hover:text-hi';
 
 export default function Footer({ base = '' }) {
   const contact = [
@@ -15,9 +16,10 @@ export default function Footer({ base = '' }) {
   ].filter(Boolean);
 
   return (
-    <footer className="relative border-t border-cream/10 bg-ink" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
-      <div className="container-site py-16 md:py-20">
-        <Logo />
+    <footer className="tone-dark relative overflow-hidden border-t border-accent/20 bg-bg" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
+      <BeanWatermark className="-bottom-40 -right-20 hidden w-[20rem] md:block" />
+      <div className="container-site relative py-16 md:py-20">
+        <Logo variant="full" />
         <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-12">
           {contact.length > 0 && (
             <div className="space-y-6 lg:col-span-3">
@@ -29,7 +31,7 @@ export default function Footer({ base = '' }) {
                       {c.label}
                     </a>
                   ) : (
-                    <p className="mt-3 text-sm text-cream/65">{c.label}</p>
+                    <p className="mt-3 text-sm text-fg/65">{c.label}</p>
                   )}
                 </div>
               ))}
@@ -74,18 +76,18 @@ export default function Footer({ base = '' }) {
 
           <div className={`sm:col-span-2 lg:col-span-4 ${contact.length ? 'lg:col-start-9' : 'lg:col-start-9'}`}>
             <p className="display text-2xl">
-              Premium Rwandan coffee. <span className="text-gold-gradient">Anytime. Anywhere.</span>
+              Premium Rwandan coffee. <span className="emph">Anytime. Anywhere.</span>
             </p>
-            <p className="mt-4 max-w-sm text-sm text-cream/65">
+            <p className="mt-4 max-w-sm text-sm text-fg/65">
               Robotic coffee kiosks for offices, hotels, airports, universities, shopping malls and stadiums.
             </p>
             <SocialList className="mt-6" />
           </div>
         </div>
       </div>
-      <div className="container-site">
-        <div className="gold-rule" />
-        <div className="flex flex-col gap-2 py-6 text-sm text-cream/60 sm:flex-row sm:justify-between">
+      <div className="container-site relative">
+        <div className="rule" />
+        <div className="flex flex-col gap-2 py-6 text-sm text-fg/60 sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} The Bean Box. All rights reserved.</p>
           <p className="font-display uppercase tracking-eyebrow text-xs sm:self-center">A Ravens Tech machine</p>
         </div>

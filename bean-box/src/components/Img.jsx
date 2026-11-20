@@ -38,9 +38,9 @@ export default function Img({
         aria-label={alt}
         className={`placeholder-box flex items-center justify-center text-center ${className}`}
       >
-        <span className="px-4 font-display text-[0.7rem] font-medium uppercase tracking-eyebrow text-gold/80">
+        <span className="px-4 font-display text-[0.7rem] font-medium uppercase tracking-eyebrow text-accent/80">
           {label || alt}
-          <span className="mt-1 block text-[0.65rem] tracking-[0.2em] text-cream/60">Image coming soon</span>
+          <span className="mt-1 block text-[0.65rem] tracking-[0.2em] text-fg/60">Image coming soon</span>
         </span>
       </div>
     );

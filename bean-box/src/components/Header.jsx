@@ -4,7 +4,7 @@ import Button from './Button.jsx';
 import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
 
-export default function Header({ base = '' }) {
+export default function Header({ base = '', overLight = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const toggleRef = useRef(null);
@@ -61,19 +61,21 @@ export default function Header({ base = '' }) {
   }, []);
 
   const solid = scrolled || open;
+  // Over the sage hero the header uses the light tone; once scrolled it becomes solid forest
+  const tone = overLight && !solid ? 'tone-light' : 'tone-dark';
 
   return (
     <>
       <a
         href="#main"
-        className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold px-5 py-3 font-display text-sm font-medium text-ink focus:translate-y-0"
+        className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-sage px-5 py-3 font-display text-sm font-semibold text-forest focus:translate-y-0"
       >
         Skip to content
       </a>
 
       <header
-        className={`fixed inset-x-0 top-0 z-[60] transition-[background-color,border-color,backdrop-filter] duration-300 ${
-          solid ? 'border-b border-gold/15 bg-ink/75 backdrop-blur-xl' : 'border-b border-transparent bg-transparent'
+        className={`${tone} fixed inset-x-0 top-0 z-[60] transition-[background-color,border-color,backdrop-filter] duration-300 ${
+          solid ? 'border-b border-accent/20 bg-bg/90 backdrop-blur-xl' : 'border-b border-transparent bg-transparent'
         }`}
         style={{ paddingTop: 'env(safe-area-inset-top)' }}
       >
@@ -86,7 +88,7 @@ export default function Header({ base = '' }) {
                 <li key={l.href}>
                   <a
                     href={`${base}${l.href}`}
-                    className="inline-flex min-h-11 items-center text-sm text-cream/80 transition-colors hover:text-gold-light"
+                    className="inline-flex min-h-11 items-center text-sm text-fg/80 transition-colors hover:text-hi"
                   >
                     {l.label}
                   </a>
@@ -96,7 +98,7 @@ export default function Header({ base = '' }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button href={`${base}#partner`} variant="gold" className="hidden sm:inline-flex">
+            <Button href={`${base}#partner`} variant="primary" className="hidden sm:inline-flex">
               Partner With Us
             </Button>
             <button
@@ -106,7 +108,7 @@ export default function Header({ base = '' }) {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? 'Close menu' : 'Open menu'}
-              className="grid h-11 w-11 place-items-center rounded-full border border-cream/20 text-cream hover:border-gold hover:text-gold lg:hidden"
+              className="grid h-11 w-11 place-items-center rounded-full border border-fg/20 text-fg hover:border-accent hover:text-accent lg:hidden"
             >
               <Icon name={open ? 'close' : 'menu'} className="h-5 w-5" strokeWidth={1.6} />
             </button>
@@ -121,22 +123,22 @@ export default function Header({ base = '' }) {
           role="dialog"
           aria-modal="true"
           aria-label="Menu"
-          className="glow-left fixed inset-0 z-[55] flex flex-col overflow-y-auto lg:hidden"
+          className="tone-dark glow-left fixed inset-0 z-[55] flex flex-col overflow-y-auto lg:hidden"
           style={{
             paddingTop: 'calc(env(safe-area-inset-top) + 5.5rem)',
             paddingBottom: 'calc(env(safe-area-inset-bottom) + 2rem)',
           }}
         >
           <nav aria-label="Mobile" className="container-site flex flex-1 flex-col">
-            <ul className="divide-y divide-gold/15 border-y border-gold/15">
+            <ul className="divide-y divide-accent/15 border-y border-accent/15">
               {NAV.map((l, i) => (
                 <li key={l.href}>
                   <a
                     href={`${base}${l.href}`}
                     onClick={() => setOpen(false)}
-                    className="flex min-h-16 items-baseline gap-5 py-4 font-display text-3xl font-light uppercase text-cream hover:text-gold-light sm:text-4xl"
+                    className="flex min-h-16 items-baseline gap-5 py-4 font-display text-3xl font-light uppercase text-fg hover:text-hi sm:text-4xl"
                   >
-                    <span aria-hidden="true" className="text-sm tracking-[0.15em] text-gold">
+                    <span aria-hidden="true" className="text-sm tracking-[0.15em] text-accent">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     {l.label}
@@ -144,13 +146,13 @@ export default function Header({ base = '' }) {
                 </li>
               ))}
             </ul>
-            <Button href={`${base}#partner`} onClick={() => setOpen(false)} variant="gold" size="lg" className="mt-10 w-full sm:w-auto sm:self-start">
+            <Button href={`${base}#partner`} onClick={() => setOpen(false)} variant="primary" size="lg" className="mt-10 w-full sm:w-auto sm:self-start">
               Partner With Us
             </Button>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-auto inline-flex min-h-11 items-center gap-2 self-start pt-10 text-sm uppercase tracking-eyebrow text-cream/70 hover:text-gold"
+              className="mt-auto inline-flex min-h-11 items-center gap-2 self-start pt-10 text-sm uppercase tracking-eyebrow text-fg/70 hover:text-accent"
             >
               <Icon name="close" className="h-4 w-4" /> Close
             </button>

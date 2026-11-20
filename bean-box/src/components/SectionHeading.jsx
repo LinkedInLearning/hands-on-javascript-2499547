@@ -10,7 +10,7 @@ export default function SectionHeading({ eyebrow, title, id, intro, aside, class
           {title}
         </h2>
       </div>
-      {intro && <p className="max-w-sm text-cream/65 md:pb-2">{intro}</p>}
+      {intro && <p className="max-w-sm text-fg/65 md:pb-2">{intro}</p>}
       {aside}
     </div>
   );

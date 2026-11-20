@@ -20,9 +20,9 @@ export default function Film() {
   const poster = url(config.filmPoster);
 
   return (
-    <section id="film" aria-labelledby="film-title" className="bg-ink py-12 md:py-20">
+    <section id="film" aria-labelledby="film-title" className="bg-bg py-12 md:py-20">
       <div className="container-site">
-        <div className="reveal relative overflow-hidden rounded-3xl border border-cream/[0.07] bg-cream/[0.035]">
+        <div className="reveal relative overflow-hidden rounded-3xl border border-fg/[0.07] bg-fg/[0.035]">
           {playing && embed ? (
             <div className="relative aspect-video">
               <h2 id="film-title" className="sr-only">
@@ -66,11 +66,11 @@ export default function Film() {
               ) : (
                 <Img src={IMAGES.highlands.src} alt="" position="center 38%" sizes="(min-width: 1280px) 1216px, 100vw" width={1024} height={1820} className="absolute inset-0 opacity-70" />
               )}
-              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/60 to-ink/30" />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-bg/95 via-bg/60 to-bg/30" />
 
               <div className="relative grid gap-8 p-7 sm:p-12 md:grid-cols-[1.2fr_auto_1fr] md:items-center md:gap-10 lg:p-16">
                 <h2 id="film-title" className="display text-[clamp(2.5rem,6vw,5rem)]">
-                  Crafted for <span className="text-gold-gradient block">every season.</span>
+                  Crafted for <span className="emph block">every season.</span>
                 </h2>
                 <div className="flex md:justify-center">
                   {embed ? (
@@ -78,18 +78,18 @@ export default function Film() {
                       type="button"
                       onClick={() => setPlaying(true)}
                       aria-label="Play the barista competition film"
-                      className="lift grid h-20 w-20 place-items-center rounded-full bg-cream/15 text-cream backdrop-blur hover:bg-gold hover:text-ink"
+                      className="lift grid h-20 w-20 place-items-center rounded-full bg-fg/15 text-fg backdrop-blur hover:bg-accent hover:text-bg"
                     >
                       <Icon name="play" className="ml-1 h-7 w-7" />
                     </button>
                   ) : (
-                    <span aria-hidden="true" className="grid h-20 w-20 place-items-center rounded-full border border-cream/25 bg-cream/5 text-cream/70 backdrop-blur">
+                    <span aria-hidden="true" className="grid h-20 w-20 place-items-center rounded-full border border-fg/25 bg-fg/5 text-fg/70 backdrop-blur">
                       <Icon name="play" className="ml-1 h-7 w-7" />
                     </span>
                   )}
                 </div>
-                <div className="max-w-xs text-sm text-cream/75">
-                  <p className="font-display text-xs uppercase tracking-eyebrow text-gold">
+                <div className="max-w-sm text-sm text-fg/80">
+                  <p className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-accent">
                     {embed ? 'The Blind Barista Challenge · 1 min' : 'Film coming soon'}
                   </p>
                   <p className="mt-3">

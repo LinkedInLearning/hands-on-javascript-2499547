@@ -30,7 +30,7 @@ export function ContactList({ className = '' }) {
       {items.map((it) => {
         const inner = (
           <>
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/30 text-gold">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-accent/30 text-accent">
               <Icon name={it.icon} className="h-4 w-4" />
             </span>
             <span>
@@ -42,11 +42,11 @@ export function ContactList({ className = '' }) {
         return (
           <li key={it.icon}>
             {it.href ? (
-              <a href={it.href} className="inline-flex min-h-11 items-center gap-3 text-cream/85 hover:text-gold-light">
+              <a href={it.href} className="inline-flex min-h-11 items-center gap-3 text-fg/85 hover:text-hi">
                 {inner}
               </a>
             ) : (
-              <span className="inline-flex min-h-11 items-center gap-3 text-cream/85">{inner}</span>
+              <span className="inline-flex min-h-11 items-center gap-3 text-fg/85">{inner}</span>
             )}
           </li>
         );
@@ -66,7 +66,7 @@ export function SocialList({ className = '' }) {
             href={s.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="lift inline-flex min-h-11 items-center rounded-full border border-cream/15 px-4 text-sm text-cream/80 hover:border-gold hover:text-gold-light"
+            className="lift inline-flex min-h-11 items-center rounded-full border border-fg/15 px-4 text-sm text-fg/80 hover:border-accent hover:text-hi"
           >
             {s.label}
             <span className="sr-only"> (opens in a new tab)</span>

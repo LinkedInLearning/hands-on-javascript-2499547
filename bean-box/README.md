@@ -48,7 +48,9 @@ Each image is served in three widths: `public/img/<name>-480.webp`, `-960.webp` 
 | `bean-kiosk-concept` | Gallery, product film poster |
 | `bean-cup-espresso`, `bean-cup-autumn` | Gallery |
 | `rwanda-farm` | Origin section ("The growers" tab) |
-| `highlands` | Decorative backdrop: origin heading and film banner |
+| `highlands` | Film banner fallback when no poster is set |
+| `cherries` | Section divider band (from the guideline) |
+| `brand-cup-beans`, `brand-espresso-pour` | Gallery (brand photography from the guideline) |
 | `venue-office`, `venue-hotel`, `venue-airport`, `venue-university`, `venue-mall`, `venue-stadium` (3:2) | Locations |
 
 Until an image exists, a dark labelled placeholder is shown in its place.
@@ -56,10 +58,16 @@ Until an image exists, a dark labelled placeholder is shown in its place.
 `bean-kiosk-render.png` is a cut-out (transparent background) so the kiosk sits directly on the page's
 near-black background. Replace it with another transparent PNG to keep that look.
 
-## Colours
+## Brand (from The Bean Box Brand Guideline)
 
-The palette is limited to four colours: `#080806` (background), `#C8A76B` (gold), `#E8D3A6` (light gold)
-and `#F5F1EA` (text). Card fills, borders and glows are translucent tints of these.
+- **Colours.** Primary: forest `#12211C`, sage `#C8C5A5`, white. Secondary, for highlights only: gold `#C9A96E`,
+  brown `#3B2A26`, green `#557769`, grey `#D9D9D9`. Sections are either `tone-dark` (forest, white text, sage
+  accents) or `tone-light` (sage, forest text); components pick their colours from the tone they sit in.
+- **Type.** Montserrat for all web text (the guideline's digital typeface). Carvest appears only inside the logo artwork.
+- **Logo.** Vector files extracted from the guideline are in `src/brand/` (`logo-full`, `logo-word`, `logo-mark`).
+  They use `currentColor`; keep to the guideline's pairings (sage on forest, forest on sage, black on white,
+  white on forest), at least 150px wide on screen, and never stretch, rotate, outline or recolour them.
+- **Favicon.** The bean mark on a forest tile, per the guideline's favicon page.
 
 ## Content
 

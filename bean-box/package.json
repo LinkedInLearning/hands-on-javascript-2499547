@@ -10,8 +10,7 @@
     "images": "node scripts/make-images.mjs"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.1.0",
-    "@fontsource-variable/outfit": "^5.1.0",
+    "@fontsource-variable/montserrat": "^5.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

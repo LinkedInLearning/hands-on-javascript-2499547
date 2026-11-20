@@ -3,7 +3,7 @@ import Img from './Img.jsx';
 import Icon from './Icon.jsx';
 
 const arrowBtn =
-  'lift grid h-12 w-12 place-items-center rounded-full border border-cream/20 text-cream hover:border-gold hover:bg-gold hover:text-ink disabled:pointer-events-none disabled:opacity-30';
+  'lift grid h-12 w-12 place-items-center rounded-full border border-fg/20 text-fg hover:border-accent hover:bg-accent hover:text-bg disabled:pointer-events-none disabled:opacity-30';
 
 export default function Gallery({ items, label = 'Gallery', title }) {
   const track = useRef(null);
@@ -59,8 +59,8 @@ export default function Gallery({ items, label = 'Gallery', title }) {
       <div className="mb-10 flex items-end justify-between gap-6">
         {title}
         <div className="flex shrink-0 items-center gap-3">
-          <p className="mr-2 hidden font-display text-sm tracking-[0.2em] text-cream/65 sm:block" aria-live="polite">
-            <span className="text-gold-light">{String(index + 1).padStart(2, '0')}</span> / {String(items.length).padStart(2, '0')}
+          <p className="mr-2 hidden font-display text-sm tracking-[0.2em] text-fg/65 sm:block" aria-live="polite">
+            <span className="text-hi">{String(index + 1).padStart(2, '0')}</span> / {String(items.length).padStart(2, '0')}
           </p>
           <button type="button" onClick={() => go(index - 1)} disabled={index === 0} aria-label="Previous image" className={arrowBtn}>
             <Icon name="arrowLeft" className="h-5 w-5" strokeWidth={1.6} />
@@ -93,10 +93,10 @@ export default function Gallery({ items, label = 'Gallery', title }) {
                 label={item.label}
                 position={item.position}
                 sizes="(min-width: 1024px) 42vw, (min-width: 640px) 62vw, 86vw"
-                className="aspect-[4/5] overflow-hidden rounded-2xl border border-cream/[0.07] bg-cream/[0.035]"
+                className="aspect-[4/5] overflow-hidden rounded-2xl border border-fg/[0.07] bg-fg/[0.035]"
               />
-              <figcaption className="mt-4 flex gap-3 text-sm text-cream/70">
-                <span aria-hidden="true" className="font-display text-gold">{String(i + 1).padStart(2, '0')}</span>
+              <figcaption className="mt-4 flex gap-3 text-sm text-fg/70">
+                <span aria-hidden="true" className="font-display text-accent">{String(i + 1).padStart(2, '0')}</span>
                 {item.caption}
               </figcaption>
             </figure>

@@ -14,10 +14,10 @@ export default function Privacy() {
         <article className="container-site max-w-3xl pb-24" style={{ paddingTop: 'calc(env(safe-area-inset-top) + 8rem)' }}>
           <Eyebrow>Legal</Eyebrow>
           <h1 className="display mt-5 text-[clamp(2.5rem,7vw,4.5rem)]">
-            Privacy <span className="text-gold-gradient">policy</span>
+            Privacy <span className="emph">policy</span>
           </h1>
-          <div className="gold-rule my-10" />
-          <div className="space-y-8 text-lg text-cream/80 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-light [&_h2]:text-cream">
+          <div className="rule my-10" />
+          <div className="space-y-8 text-lg text-fg/80 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-light [&_h2]:text-fg">
             <section>
               <h2>What we collect</h2>
               <p className="mt-3">
@@ -46,7 +46,7 @@ export default function Privacy() {
                 {config.email ? (
                   <>
                     {' '}by emailing{' '}
-                    <a className="text-gold-light underline underline-offset-4" href={`mailto:${config.email}`}>
+                    <a className="text-hi underline underline-offset-4" href={`mailto:${config.email}`}>
                       {config.email}
                     </a>
                   </>
@@ -56,7 +56,7 @@ export default function Privacy() {
             </section>
           </div>
           <p className="mt-14">
-            <a href={url('/')} className="inline-flex min-h-11 items-center text-gold-light underline underline-offset-4 hover:text-gold">
+            <a href={url('/')} className="inline-flex min-h-11 items-center text-hi underline underline-offset-4 hover:text-accent">
               ← Back to The Bean Box
             </a>
           </p>

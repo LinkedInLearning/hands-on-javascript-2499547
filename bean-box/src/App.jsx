@@ -14,7 +14,7 @@ export default function App() {
   useReveal();
   return (
     <>
-      <Header />
+      <Header overLight />
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
         <Machine />

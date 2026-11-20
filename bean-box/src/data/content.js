@@ -24,6 +24,20 @@ export const IMAGES = {
     alt: 'A Bean Box takeaway cup on a wooden table among autumn leaves',
     position: 'center 55%',
   },
+  cherries: {
+    src: '/img/cherries',
+    alt: '',
+  },
+  cupBeans: {
+    src: '/img/brand-cup-beans',
+    alt: 'A white Bean Box espresso cup on a bed of roasted coffee beans, beside a tamper and portafilter',
+    position: 'center 60%',
+  },
+  espressoPour: {
+    src: '/img/brand-espresso-pour',
+    alt: 'Espresso pouring from a machine into a white Bean Box cup',
+    position: '62% 50%',
+  },
   highlands: {
     src: '/img/highlands',
     alt: '',
@@ -40,7 +54,9 @@ export const GALLERY = [
   { ...IMAGES.render, caption: 'The Bean Box: a full coffee bar behind glass.' },
   // Add back once /img/bean-kiosk-concept is supplied:
   // { ...IMAGES.concept, caption: 'The arm places each finished cup on the pickup shelf.' },
-  { ...IMAGES.espresso, caption: 'Pulled to order, straight into a Bean Box cup.' },
+  { ...IMAGES.espressoPour, caption: 'A fresh shot, poured into a Bean Box cup.' },
+  { ...IMAGES.espresso, caption: 'Pulled to order, straight into a Bean Box takeaway cup.' },
+  { ...IMAGES.cupBeans, caption: 'Every cup starts with whole beans, ground to order.' },
   { ...IMAGES.autumn, caption: 'Take it with you, wherever the day goes.' },
 ];
 

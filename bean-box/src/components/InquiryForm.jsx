@@ -87,22 +87,22 @@ const LABELS = {
 function Field({ id, label, required, error, hint, children }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-2 block text-sm font-medium text-cream/90">
+      <label htmlFor={id} className="mb-2 block text-sm font-medium text-fg/90">
         {label}
         {required && (
-          <span className="text-gold" aria-hidden="true">
+          <span className="text-accent" aria-hidden="true">
             {' '}*
           </span>
         )}
       </label>
       {children}
       {hint && !error && (
-        <p id={`${id}-hint`} className="mt-1.5 text-xs text-cream/60">
+        <p id={`${id}-hint`} className="mt-1.5 text-xs text-fg/60">
           {hint}
         </p>
       )}
       {error && (
-        <p id={`${id}-error`} className="mt-1.5 text-sm text-[#E8D3A6]">
+        <p id={`${id}-error`} className="mt-1.5 text-sm text-hi">
           {error}
         </p>
       )}
@@ -224,15 +224,15 @@ export default function InquiryForm() {
         ref={statusRef}
         tabIndex={-1}
         role="status"
-        className="flex min-h-[28rem] flex-col items-center justify-center rounded-3xl border border-gold/25 bg-cream/[0.04] p-8 text-center"
+        className="flex min-h-[28rem] flex-col items-center justify-center rounded-3xl bg-bg p-8 text-center"
       >
-        <span className="grid h-14 w-14 place-items-center rounded-full border border-gold/50 text-gold">
+        <span className="grid h-14 w-14 place-items-center rounded-full border border-accent/50 text-accent">
           <Icon name="check" className="h-7 w-7" strokeWidth={1.8} />
         </span>
         <h3 className="mt-6 font-display text-2xl font-medium">
           {status === 'success' ? 'Thank you. Your inquiry is in.' : 'Your email is ready to send.'}
         </h3>
-        <p className="mt-3 max-w-sm text-cream/75">
+        <p className="mt-3 max-w-sm text-fg/75">
           {status === 'success'
             ? 'We reply within one business day.'
             : `Your email app should have opened with your inquiry filled in. Press send and we'll reply within one business day.`}
@@ -252,12 +252,12 @@ export default function InquiryForm() {
       noValidate
       onSubmit={onSubmit}
       aria-busy={loading}
-      className="rounded-3xl border border-cream/10 bg-cream/[0.04] p-5 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)] backdrop-blur sm:p-8"
+      className="rounded-3xl bg-bg p-5 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] sm:p-8"
     >
       <fieldset aria-describedby={visibleError('type') ? `${id('type')}-error` : undefined}>
-        <legend className="font-display text-lg font-medium text-cream">
+        <legend className="font-display text-lg font-medium text-fg">
           What would you like to do?
-          <span className="text-gold" aria-hidden="true">
+          <span className="text-accent" aria-hidden="true">
             {' '}*
           </span>
         </legend>
@@ -275,27 +275,27 @@ export default function InquiryForm() {
                 }}
                 className="peer sr-only"
               />
-              <span className="flex h-full min-h-[5.5rem] flex-col rounded-2xl border border-cream/15 bg-ink/60 p-4 transition-colors hover:border-gold/50 peer-checked:border-gold peer-checked:bg-gold/10 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gold">
-                <span className="pr-7 font-display font-medium text-cream">{t.title}</span>
-                <span className="mt-1 text-sm text-cream/70">{t.text}</span>
+              <span className="flex h-full min-h-[5.5rem] flex-col rounded-2xl border border-fg/15 bg-bg/60 p-4 transition-colors hover:border-accent/50 peer-checked:border-accent peer-checked:bg-accent/10 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">
+                <span className="pr-7 font-display font-medium text-fg">{t.title}</span>
+                <span className="mt-1 text-sm text-fg/70">{t.text}</span>
               </span>
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute right-4 top-4 grid h-5 w-5 place-items-center rounded-full border border-cream/30 peer-checked:border-gold peer-checked:bg-gold peer-checked:[&>span]:opacity-100"
+                className="pointer-events-none absolute right-4 top-4 grid h-5 w-5 place-items-center rounded-full border border-fg/30 peer-checked:border-accent peer-checked:bg-accent peer-checked:[&>span]:opacity-100"
               >
-                <span className="h-2 w-2 rounded-full bg-ink opacity-0" />
+                <span className="h-2 w-2 rounded-full bg-bg opacity-0" />
               </span>
             </label>
           ))}
         </div>
         {visibleError('type') && (
-          <p id={`${id('type')}-error`} className="mt-2 text-sm text-[#E8D3A6]">
+          <p id={`${id('type')}-error`} className="mt-2 text-sm text-hi">
             {errors.type}
           </p>
         )}
       </fieldset>
 
-      <div className="gold-rule my-7" />
+      <div className="rule my-7" />
 
       <div className="grid gap-5 sm:grid-cols-2">
         <Field id={id('name')} label="Full name" required error={visibleError('name')}>
@@ -359,7 +359,7 @@ export default function InquiryForm() {
       </div>
 
       <div className="mt-6">
-        <label className="flex cursor-pointer items-start gap-3 text-sm text-cream/80">
+        <label className="flex cursor-pointer items-start gap-3 text-sm text-fg/80">
           <input
             id={id('consent')}
             type="checkbox"
@@ -370,31 +370,31 @@ export default function InquiryForm() {
             }}
             aria-invalid={visibleError('consent') ? 'true' : undefined}
             aria-describedby={visibleError('consent') ? `${id('consent')}-error` : undefined}
-            className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded accent-[#C8A76B]"
+            className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded accent-[#C8C5A5]"
           />
           <span>
             I agree to The Bean Box contacting me about this inquiry and to the{' '}
-            <a href={url('/privacy.html')} className="text-gold-light underline decoration-gold/50 underline-offset-4 hover:text-gold">
+            <a href={url('/privacy.html')} className="text-hi underline decoration-accent/50 underline-offset-4 hover:text-accent">
               privacy policy
             </a>
-            .<span className="text-gold" aria-hidden="true"> *</span>
+            .<span className="text-accent" aria-hidden="true"> *</span>
           </span>
         </label>
         {visibleError('consent') && (
-          <p id={`${id('consent')}-error`} className="mt-1.5 pl-8 text-sm text-[#E8D3A6]">
+          <p id={`${id('consent')}-error`} className="mt-1.5 pl-8 text-sm text-hi">
             {errors.consent}
           </p>
         )}
       </div>
 
       {status === 'error' && (
-        <div ref={statusRef} tabIndex={-1} role="alert" className="mt-6 rounded-xl border border-[#E8D3A6]/40 bg-[#E8D3A6]/10 p-4 text-sm text-cream">
+        <div ref={statusRef} tabIndex={-1} role="alert" className="mt-6 rounded-xl border border-hi/50 bg-hi/10 p-4 text-sm text-fg">
           <p className="font-medium">We couldn't send your inquiry.</p>
-          <p className="mt-1 text-cream/75">
+          <p className="mt-1 text-fg/75">
             {serverError} {config.email ? (
               <>
                 Please try again, or email us at{' '}
-                <a className="text-gold-light underline underline-offset-4" href={`mailto:${config.email}`}>
+                <a className="text-hi underline underline-offset-4" href={`mailto:${config.email}`}>
                   {config.email}
                 </a>
                 .
@@ -407,13 +407,13 @@ export default function InquiryForm() {
       )}
 
       <div className="mt-7 flex flex-col-reverse items-stretch gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs text-cream/60">
-          <span className="text-gold" aria-hidden="true">*</span> Required
+        <p className="text-xs text-fg/60">
+          <span className="text-accent" aria-hidden="true">*</span> Required
         </p>
-        <Button type="submit" variant="gold" size="lg" disabled={loading} className="sm:min-w-[15rem]">
+        <Button type="submit" variant="primary" size="lg" disabled={loading} className="sm:min-w-[15rem]">
           {loading ? (
             <>
-              <span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-ink/30 border-t-ink" />
+              <span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-bg/30 border-t-bg" />
               Sending…
             </>
           ) : (

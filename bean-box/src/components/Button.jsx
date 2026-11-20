@@ -1,8 +1,10 @@
+// Guideline buttons: pill shape, Montserrat SemiBold, forest text on sage or on white.
+// "primary" reads the section tone: sage pill on forest, forest pill on sage.
 const VARIANTS = {
-  gold: 'bg-gold text-ink hover:bg-gold-light shadow-[0_10px_30px_-12px_rgba(200,167,107,0.7)]',
-  light: 'bg-cream text-ink hover:bg-gold-light shadow-[0_10px_30px_-14px_rgba(245,241,234,0.55)]',
-  soft: 'bg-cream/10 text-cream hover:bg-cream/15 border border-cream/10',
-  ghost: 'border border-cream/30 text-cream hover:border-gold hover:text-gold-light bg-ink/20 backdrop-blur-sm',
+  primary: 'bg-accent text-bg hover:bg-fg hover:text-bg shadow-[0_10px_30px_-14px_rgb(0_0_0/0.45)]',
+  white: 'bg-white text-forest hover:bg-sage hover:text-forest shadow-[0_10px_30px_-14px_rgb(0_0_0/0.35)]',
+  ghost: 'border border-fg/40 text-fg hover:border-accent hover:bg-fg/5',
+  soft: 'bg-fg/10 text-fg hover:bg-fg/15 border border-fg/10',
 };
 
 const SIZES = {
@@ -10,8 +12,8 @@ const SIZES = {
   lg: 'min-h-12 px-7 text-[0.95rem]',
 };
 
-export default function Button({ href, variant = 'gold', size = 'md', className = '', children, ...rest }) {
-  const cls = `lift inline-flex items-center justify-center gap-2 rounded-full font-display font-normal tracking-[0.02em] disabled:cursor-not-allowed disabled:opacity-60 ${VARIANTS[variant]} ${SIZES[size]} ${className}`;
+export default function Button({ href, variant = 'primary', size = 'md', className = '', children, ...rest }) {
+  const cls = `lift inline-flex items-center justify-center gap-2 rounded-full font-display font-semibold disabled:cursor-not-allowed disabled:opacity-60 ${VARIANTS[variant]} ${SIZES[size]} ${className}`;
   if (href) {
     return (
       <a href={href} className={cls} {...rest}>
