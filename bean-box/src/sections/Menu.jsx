@@ -3,7 +3,7 @@ import { MENU } from '../data/content.js';
 
 export default function Menu() {
   return (
-    <section id="menu" aria-labelledby="menu-title" className="relative bg-bg py-24 md:py-32">
+    <section id="menu" aria-labelledby="menu-title" className="tone-dark bean-bg lux relative py-24 md:py-32">
       <div className="container-site">
         <SectionHeading
           eyebrow="03 — The menu"

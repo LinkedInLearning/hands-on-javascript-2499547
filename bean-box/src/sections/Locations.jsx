@@ -4,7 +4,7 @@ import { VENUES } from '../data/content.js';
 
 export default function Locations() {
   return (
-    <section id="locations" aria-labelledby="locations-title" className="relative overflow-hidden bg-bg py-24 md:py-32">
+    <section id="locations" aria-labelledby="locations-title" className="tone-dark bean-bg lux relative overflow-hidden py-24 md:py-32">
       {/* Thin sweeping line behind the cards */}
       <svg aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-1/2 hidden h-64 w-full text-fg/10 md:block" viewBox="0 0 1440 256" preserveAspectRatio="none" fill="none">
         <path d="M0 220C320 220 420 60 760 60S1180 200 1440 140" stroke="currentColor" strokeWidth="1.5" />

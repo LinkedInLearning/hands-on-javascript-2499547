@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <>
       {/* Sage hero, after the guideline cover: light line + bold line, ↗ arrow, thin rules */}
-      <section id="top" aria-labelledby="hero-title" className="tone-light relative overflow-hidden bg-bg">
+      <section id="top" aria-labelledby="hero-title" className="tone-light lux relative overflow-hidden">
         <div
           className="container-site relative grid items-center gap-10 pb-14 lg:min-h-[100svh] lg:grid-cols-[1fr_1fr] lg:gap-6 lg:pb-16"
           style={{ paddingTop: 'calc(env(safe-area-inset-top) + 7rem)' }}
@@ -81,7 +81,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className="tone-dark bg-bg">
+      <div className="tone-dark relative border-y border-accent/25 bg-bg">
         <div className="container-site flex items-center gap-8 py-8">
           <ol tabIndex={0} className="no-scrollbar relative -mx-4 flex min-w-0 flex-1 gap-8 overflow-x-auto px-4 md:mx-0 md:justify-between md:px-0" aria-label="How it works">
             {STEPS.map((s, i) => (

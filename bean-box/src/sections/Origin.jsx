@@ -35,7 +35,7 @@ export default function Origin() {
   };
 
   return (
-    <section id="coffee" aria-labelledby="coffee-title" className="tone-light relative bg-bg">
+    <section id="coffee" aria-labelledby="coffee-title" className="tone-light lux relative">
       <DividerBand number="02." title="From Rwanda to your cup" id="coffee-title" />
       <div className="container-site relative py-20 md:py-28">
         <p className="reveal max-w-2xl text-lg font-medium text-fg/85">

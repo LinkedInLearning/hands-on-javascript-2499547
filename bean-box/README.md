@@ -5,7 +5,7 @@ Single-page site for The Bean Box, Ravens Tech's robotic coffee kiosk. Built wit
 ```bash
 npm install
 npm run dev       # local dev server
-npm run build     # production build in dist/ (index.html + privacy.html)
+npm run build     # production build in dist/ (index.html, story.html, privacy.html)
 npm run preview   # serve the build
 ```
 
@@ -33,6 +33,7 @@ Ravens Tech URL, product film URL and the coffee origin facts. An empty value hi
 - `formEndpoint` empty: the form opens a pre-filled email to `email`.
 - `filmUrl`: a YouTube or Vimeo link, or a direct `.mp4`/`.webm` (put files in `public/film/`). Empty shows "Film coming soon".
 - `filmPoster`: the still shown before a direct video file plays.
+- `hours`: office hours in the footer. `socialHandle`: shown after "Tag us in your photos!".
 - `origin`: region, altitude, cooperative and roaster. Each row appears only once it has a value.
 
 ## Images
@@ -48,6 +49,7 @@ Each image is served in three widths: `public/img/<name>-480.webp`, `-960.webp` 
 | `bean-kiosk-concept` | Gallery, product film poster |
 | `bean-cup-espresso`, `bean-cup-autumn` | Gallery |
 | `rwanda-farm` | Origin section ("The growers" tab) |
+| `story-women-picking` | Story page, chapter 03 (still needed) |
 | `highlands` | Film banner fallback when no poster is set |
 | `cherries` | Section divider band (from the guideline) |
 | `brand-cup-beans`, `brand-espresso-pour` | Gallery (brand photography from the guideline) |
@@ -71,5 +73,5 @@ near-black background. Replace it with another transparent PNG to keep that look
 
 ## Content
 
-Copy for the menu (drink names), features, venues, Question Coffee and form options is in `src/data/content.js`.
+Partnership programmes, Story chapters, copy for the menu (drink names), features, venues, Question Coffee and form options is in `src/data/content.js`.
 Before launch, set `og:image` in `index.html` to the full `https://` URL of `og-image.jpg`.

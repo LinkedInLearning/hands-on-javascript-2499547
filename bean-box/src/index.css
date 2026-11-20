@@ -6,13 +6,16 @@
 
 @layer base {
   /* Section tones. Every colour utility (bg, fg, head, accent, hi) reads these. */
+  :root {
+    --bean: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='360' viewBox='0 0 340 360'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='.32' stroke-width='2.2' stroke-linecap='round'%3E%3Cg transform='translate%2820 18%29 rotate%28-35 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28150 10%29 rotate%2840 30 40%29 scale%280.9%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28240 110%29 rotate%28-70 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2895 120%29 rotate%2815 30 40%29 scale%281.1%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2810 190%29 rotate%2860 30 40%29 scale%280.95%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28180 200%29 rotate%28-15 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28270 250%29 rotate%2830 30 40%29 scale%280.85%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2860 280%29 rotate%28-55 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
   :root,
   .tone-dark {
     --c-bg: 18 33 28; /* forest #12211C */
     --c-fg: 255 255 255; /* white */
     --c-head: 200 197 165; /* sage #C8C5A5 */
-    --c-accent: 200 197 165; /* sage */
-    --c-hi: 201 169 110; /* gold #C9A96E, secondary highlight */
+    --c-accent: 201 169 110; /* gold #C9A96E: hairlines, labels, numbers */
+    --c-hi: 201 169 110; /* gold */
   }
   .tone-light {
     --c-bg: 200 197 165; /* sage */
@@ -76,6 +79,39 @@
   .emph {
     font-weight: 700;
   }
+  /* On forest, bold words take a gold sheen */
+  .tone-dark .emph,
+  :root .emph:not(.tone-light .emph) {
+    background: linear-gradient(100deg, #E6D3A3 0%, #C9A96E 55%, #B8955A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tone-light .emph {
+    background: none;
+    color: inherit;
+  }
+
+  /* Luxury surfaces: deep forest vignette, sage with a soft sheen */
+  .tone-dark.lux,
+  .lux.tone-dark {
+    background:
+      radial-gradient(80% 60% at 50% 0%, rgb(201 169 110 / 0.07), transparent 70%),
+      radial-gradient(120% 90% at 50% 100%, rgb(5 12 9 / 0.55), transparent 70%),
+      rgb(var(--c-bg));
+  }
+  .tone-light.lux {
+    background:
+      radial-gradient(70% 60% at 15% 10%, rgb(255 255 255 / 0.28), transparent 65%),
+      radial-gradient(60% 60% at 90% 100%, rgb(59 42 38 / 0.08), transparent 70%),
+      rgb(var(--c-bg));
+  }
+  /* Thin gold rule with fading ends */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C9A96E 20%, #C9A96E 80%, transparent);
+    opacity: 0.6;
+  }
 
   .display {
     @apply font-display font-light uppercase text-head;
@@ -117,10 +153,16 @@
       rgb(var(--c-bg));
   }
 
-  /* Brand pattern: the bean mark repeated (guideline "Brand Pattern") */
-  .bean-pattern {
-    background-image: var(--bean-pattern);
-    background-size: 120px 128px;
+  /* Hand-drawn coffee-bean pattern behind forest sections */
+  .bean-bg {
+    background-color: rgb(var(--c-bg));
+    background-blend-mode: normal;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='360' viewBox='0 0 340 360'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='.32' stroke-width='2.2' stroke-linecap='round'%3E%3Cg transform='translate%2820 18%29 rotate%28-35 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28150 10%29 rotate%2840 30 40%29 scale%280.9%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28240 110%29 rotate%28-70 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2895 120%29 rotate%2815 30 40%29 scale%281.1%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2810 190%29 rotate%2860 30 40%29 scale%280.95%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28180 200%29 rotate%28-15 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28270 250%29 rotate%2830 30 40%29 scale%280.85%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2860 280%29 rotate%28-55 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 340px 360px;
+  }
+  .bean-bg.lux {
+    background-image: radial-gradient(80% 60% at 50% 0%, rgb(201 169 110 / 0.08), transparent 70%), radial-gradient(120% 90% at 50% 100%, rgb(5 12 9 / 0.55), transparent 70%), var(--bean);
+    background-size: auto, auto, 340px 360px;
   }
 
   .placeholder-box {

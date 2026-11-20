@@ -20,7 +20,7 @@ export default function Film() {
   const poster = url(config.filmPoster);
 
   return (
-    <section id="film" aria-labelledby="film-title" className="bg-bg py-12 md:py-20">
+    <section id="film" aria-labelledby="film-title" className="tone-dark bean-bg lux py-12 md:py-20">
       <div className="container-site">
         <div className="reveal relative overflow-hidden rounded-3xl border border-fg/[0.07] bg-fg/[0.035]">
           {playing && embed ? (

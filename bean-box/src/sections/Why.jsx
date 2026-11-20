@@ -5,7 +5,7 @@ import { WHY } from '../data/content.js';
 
 export default function Why() {
   return (
-    <section aria-labelledby="why-title" className="tone-light relative bg-bg py-24 md:py-32">
+    <section aria-labelledby="why-title" className="tone-light lux relative py-24 md:py-32">
       <div className="container-site">
         <SectionHeading
           eyebrow="04 — Why The Bean Box"

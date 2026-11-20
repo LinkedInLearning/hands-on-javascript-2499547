@@ -10,7 +10,7 @@ import { GALLERY, IMAGES, MACHINE_CHIPS, MACHINE_FEATURES } from '../data/conten
 
 export default function Machine() {
   return (
-    <section id="machine" aria-labelledby="machine-title" className="tone-dark relative bg-bg py-24 md:py-32">
+    <section id="machine" aria-labelledby="machine-title" className="tone-dark bean-bg lux relative py-24 md:py-32">
       <BeanWatermark className="-right-24 top-16 hidden w-[26rem] lg:block" />
       <div className="container-site relative">
         {/* About-style intro: portrait image fading into black, copy on the right */}
@@ -44,10 +44,6 @@ export default function Machine() {
             <p className="mt-4 max-w-lg text-fg/70">
               A robotic barista inside a glass box. Order on the touchscreen, pay contactless, then watch the arm brew
               your drink and hand over a fresh cup.
-            </p>
-            <p className="mt-4 max-w-lg text-fg/70">
-              The Bean Box merges advanced automation with the rich heritage of Rwandan coffee, delivering precision,
-              consistency and speed without compromising on quality.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-6">
               <Button href="#menu" variant="soft">

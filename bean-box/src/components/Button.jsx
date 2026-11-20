@@ -1,9 +1,9 @@
 // Guideline buttons: pill shape, Montserrat SemiBold, forest text on sage or on white.
 // "primary" reads the section tone: sage pill on forest, forest pill on sage.
 const VARIANTS = {
-  primary: 'bg-accent text-bg hover:bg-fg hover:text-bg shadow-[0_10px_30px_-14px_rgb(0_0_0/0.45)]',
+  primary: 'bg-accent text-bg hover:brightness-110 shadow-[0_12px_32px_-14px_rgb(var(--c-accent)/0.7)]',
   white: 'bg-white text-forest hover:bg-sage hover:text-forest shadow-[0_10px_30px_-14px_rgb(0_0_0/0.35)]',
-  ghost: 'border border-fg/40 text-fg hover:border-accent hover:bg-fg/5',
+  ghost: 'border border-accent/60 text-fg hover:border-accent hover:bg-accent/10',
   soft: 'bg-fg/10 text-fg hover:bg-fg/15 border border-fg/10',
 };
 

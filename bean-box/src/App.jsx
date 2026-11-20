@@ -8,6 +8,8 @@ import Why from './sections/Why.jsx';
 import Locations from './sections/Locations.jsx';
 import Partner from './sections/Partner.jsx';
 import Film from './sections/Film.jsx';
+import Statement from './sections/Statement.jsx';
+import Programs from './sections/Programs.jsx';
 import useReveal from './useReveal.js';
 
 export default function App() {
@@ -17,12 +19,14 @@ export default function App() {
       <Header overLight />
       <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
+        <Statement />
         <Machine />
         <Origin />
         <Menu />
         <Why />
         <Locations />
         <Film />
+        <Programs />
         <Partner />
       </main>
       <Footer />

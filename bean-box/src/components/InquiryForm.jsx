@@ -18,6 +18,7 @@ const EMPTY = {
   traffic: '',
   region: '',
   message: '',
+  tier: '',
   consent: false,
 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -56,6 +57,7 @@ function payloadOf(v) {
   const type = INQUIRY_TYPES.find((t) => t.value === v.type);
   const out = {
     inquiry: type?.title ?? '',
+    programme: v.tier,
     name: v.name.trim(),
     company: v.company.trim(),
     email: v.email.trim(),
@@ -72,6 +74,7 @@ function payloadOf(v) {
 
 const LABELS = {
   inquiry: 'Inquiry',
+  programme: 'Programme',
   name: 'Name',
   company: 'Company / venue',
   email: 'Email',
@@ -125,6 +128,17 @@ export default function InquiryForm() {
   const visibleError = (k) => (touched[k] ? errors[k] : undefined);
   const chosen = INQUIRY_TYPES.find((t) => t.value === values.type);
   const submitLabel = chosen?.submit ?? 'Send inquiry';
+
+  // "Enquire about this programme" / "Become a Partner" preselect the option
+  useEffect(() => {
+    const onChoose = (e) => {
+      const { type, tier } = e.detail || {};
+      setValues((v) => ({ ...v, type: type || v.type, tier: tier || '' }));
+      if (type) setTouched((t) => ({ ...t, type: true }));
+    };
+    window.addEventListener('beanbox:choose', onChoose);
+    return () => window.removeEventListener('beanbox:choose', onChoose);
+  }, []);
 
   useEffect(() => {
     try {
@@ -261,6 +275,20 @@ export default function InquiryForm() {
             {' '}*
           </span>
         </legend>
+        {values.tier && (
+          <p className="mt-3 flex flex-wrap items-center gap-3 text-sm text-fg/85">
+            <span>
+              Programme: <strong className="font-semibold text-accent">{values.tier}</strong>
+            </span>
+            <button
+              type="button"
+              onClick={() => setValues((v) => ({ ...v, tier: '' }))}
+              className="min-h-11 text-fg/80 underline underline-offset-4 hover:text-fg"
+            >
+              Clear
+            </button>
+          </p>
+        )}
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {INQUIRY_TYPES.map((t) => (
             <label key={t.value} className="relative block cursor-pointer">

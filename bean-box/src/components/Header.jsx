@@ -3,6 +3,7 @@ import { NAV } from '../data/content.js';
 import Button from './Button.jsx';
 import Icon from './Icon.jsx';
 import Logo from './Logo.jsx';
+import { navHref } from './Footer.jsx';
 
 export default function Header({ base = '', overLight = false }) {
   const [scrolled, setScrolled] = useState(false);
@@ -83,11 +84,11 @@ export default function Header({ base = '', overLight = false }) {
           <Logo />
 
           <nav aria-label="Main" className="hidden lg:block">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-6 xl:gap-8">
               {NAV.map((l) => (
                 <li key={l.href}>
                   <a
-                    href={`${base}${l.href}`}
+                    href={navHref(l, base)}
                     className="inline-flex min-h-11 items-center text-sm text-fg/80 transition-colors hover:text-hi"
                   >
                     {l.label}
@@ -134,7 +135,7 @@ export default function Header({ base = '', overLight = false }) {
               {NAV.map((l, i) => (
                 <li key={l.href}>
                   <a
-                    href={`${base}${l.href}`}
+                    href={navHref(l, base)}
                     onClick={() => setOpen(false)}
                     className="flex min-h-16 items-baseline gap-5 py-4 font-display text-3xl font-light uppercase text-fg hover:text-hi sm:text-4xl"
                   >

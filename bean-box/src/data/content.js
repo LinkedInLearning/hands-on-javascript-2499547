@@ -1,5 +1,6 @@
 export const NAV = [
   { href: '#machine', label: 'The Machine' },
+  { href: '/story.html', label: 'Our Story', page: true },
   { href: '#coffee', label: 'Our Coffee' },
   { href: '#menu', label: 'Menu' },
   { href: '#locations', label: 'Locations' },
@@ -56,7 +57,6 @@ export const GALLERY = [
   // { ...IMAGES.concept, caption: 'The arm places each finished cup on the pickup shelf.' },
   { ...IMAGES.espressoPour, caption: 'A fresh shot, poured into a Bean Box cup.' },
   { ...IMAGES.espresso, caption: 'Pulled to order, straight into a Bean Box takeaway cup.' },
-  { ...IMAGES.cupBeans, caption: 'Every cup starts with whole beans, ground to order.' },
   { ...IMAGES.autumn, caption: 'Take it with you, wherever the day goes.' },
 ];
 
@@ -211,3 +211,62 @@ export const QUESTION_COFFEE = {
     },
   ],
 };
+
+/** Partnership programmes (from The Bean Box partner materials). `type` preselects the inquiry form option. */
+export const PROGRAMS = [
+  {
+    id: 'owner',
+    icon: 'person',
+    name: 'The Bean Box Owner',
+    designedFor:
+      'Individuals or businesses looking to own and operate a single Bean Box Robot Coffee Barista. The ideal "Business in a Box" for entrepreneurs who want an automated coffee business with minimal operational complexity.',
+    investment: 'One Bean Box Robot Coffee Barista.',
+    type: 'buy',
+  },
+  {
+    id: 'dealer',
+    icon: 'network',
+    name: 'The Bean Box Dealer',
+    designedFor:
+      'Entrepreneurs who wish to build a local Bean Box business by operating multiple units within an exclusive city or metropolitan territory.',
+    investment: 'Minimum purchase of two Bean Box Robot Coffee Baristas.',
+    type: 'partner',
+  },
+  {
+    id: 'entrepreneur',
+    icon: 'globe',
+    name: 'The Bean Box Entrepreneur',
+    designedFor:
+      'Experienced entrepreneurs and investors seeking to build and manage a large-scale Bean Box operation across a major geographic territory.',
+    investment: 'Minimum purchase of five Bean Box Robot Coffee Baristas.',
+    type: 'partner',
+  },
+];
+
+/** Story page chapters. */
+export const STORY = [
+  {
+    n: '01',
+    title: 'Land of a thousand hills',
+    text: "Rwanda's unique climate and rich soils create the perfect home for exceptional coffee.",
+    image: { src: '/img/highlands', alt: 'Misty green hills at sunrise', position: 'center 35%' },
+  },
+  {
+    n: '02',
+    title: 'A cherry',
+    text: 'It begins as a single cherry, nurtured by nature, ripened to perfection.',
+    image: { src: '/img/cherries', alt: 'Coffee cherries ripening on the branch' },
+  },
+  {
+    n: '03',
+    title: 'Handpicked by women',
+    text: "Handpicked with care by the women who are the heart of Rwanda's coffee heritage.",
+    image: { src: '/img/story-women-picking', alt: 'Women handpicking ripe coffee cherries', label: 'Women picking coffee photo' },
+  },
+  {
+    n: '04',
+    title: 'The Bean Box',
+    text: 'Where innovation meets tradition, crafting the perfect cup in just 90 seconds.',
+    image: { src: '/img/bean-kiosk-render', alt: 'The Bean Box robotic coffee kiosk', contain: true },
+  },
+];

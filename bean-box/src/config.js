@@ -8,6 +8,15 @@ const config = {
   phone: '', // e.g. '+250 7XX XXX XXX' (shown as written; dialled with spaces removed)
   location: '', // e.g. 'Kigali, Rwanda'
 
+  // Office hours shown in the footer (empty list hides the card)
+  hours: [
+    { days: 'Monday to Friday', time: '9:00 am to 6:00 pm' },
+    { days: 'Saturday', time: '9:00 am to 12:00 noon' },
+  ],
+
+  // Handle or hashtag for "Tag us in your photos!", e.g. '@thebeanbox' (empty shows the line without it)
+  socialHandle: '',
+
   // Social links: leave a URL empty to hide that network
   social: {
     instagram: '',

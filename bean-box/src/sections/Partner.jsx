@@ -4,10 +4,10 @@ import { ContactList, contactItems } from '../components/Contact.jsx';
 
 export default function Partner() {
   return (
-    <section id="partner" aria-labelledby="partner-title" className="tone-light relative bg-bg py-24 md:py-32">
+    <section id="partner" aria-labelledby="partner-title" className="tone-light lux relative py-24 md:py-32">
       <div className="container-site grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div className="reveal lg:sticky lg:top-28 lg:self-start">
-          <Eyebrow>06 — Partner with us</Eyebrow>
+          <Eyebrow>07 — Get in touch</Eyebrow>
           <h2
             id="partner-title"
             className="display mt-5 text-[clamp(2.4rem,5.2vw,4.25rem)]"
