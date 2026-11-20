@@ -4,7 +4,7 @@
  */
 const config = {
   // Contact
-  email: '', // e.g. 'hello@thebeanbox.example'
+  email: 'info@ravensnexus.com',
   phone: '', // e.g. '+250 7XX XXX XXX' (shown as written; dialled with spaces removed)
   location: '', // e.g. 'Kigali, Rwanda'
 
