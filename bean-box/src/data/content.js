@@ -261,7 +261,7 @@ export const STORY = [
     n: '03',
     title: 'Handpicked by women',
     text: "Handpicked with care by the women who are the heart of Rwanda's coffee heritage.",
-    image: { src: '/img/story-women-picking', alt: 'Women handpicking ripe coffee cherries', label: 'Women picking coffee photo' },
+    image: { src: '/img/story-women-picking', alt: 'A hand picking ripe red coffee cherries from the branch', position: '40% 55%' },
   },
   {
     n: '04',

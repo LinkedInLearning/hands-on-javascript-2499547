@@ -49,7 +49,7 @@ Each image is served in three widths: `public/img/<name>-480.webp`, `-960.webp` 
 | `bean-kiosk-concept` | Gallery, product film poster |
 | `bean-cup-espresso`, `bean-cup-autumn` | Gallery |
 | `rwanda-farm` | Origin section ("The growers" tab) |
-| `story-women-picking` | Story page, chapter 03 (still needed) |
+| `story-women-picking` | Story page, chapter 03 |
 | `highlands` | Film banner fallback when no poster is set |
 | `cherries` | Section divider band (from the guideline) |
 | `brand-cup-beans`, `brand-espresso-pour` | Gallery (brand photography from the guideline) |
