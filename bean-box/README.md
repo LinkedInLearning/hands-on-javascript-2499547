@@ -9,20 +9,25 @@ npm run build     # production build in dist/ (index.html, story.html, privacy.h
 npm run preview   # serve the build
 ```
 
-## Hosting (GitHub Pages)
+## Hosting (Cloudflare Pages)
 
-`.github/workflows/deploy-bean-box.yml` builds this folder and publishes it to GitHub Pages
-whenever `bean-box/` changes on `main` (or when run by hand from the Actions tab).
+Connect the GitHub repository in Cloudflare: **Workers & Pages → Create → Pages → Connect to Git**, then use:
 
-One-time setup: repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Framework preset | Vite (or None) |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Root directory (advanced) | `bean-box` |
 
-The site is then live at `https://yannidus.github.io/hands-on-javascript-2499547/`.
+Every push to `main` then redeploys the site; other branches get preview links.
 
-- **Custom domain:** add it under Settings → Pages → Custom domain and point your DNS at GitHub
-  (see GitHub's "Managing a custom domain" guide). The workflow picks up the new address automatically;
-  also update the default `VITE_SITE_URL` in `vite.config.js` for local builds.
-- **Other hosts:** `npm run build` produces a static `dist/` folder that works on any host.
-  For a sub-path, build with `BASE_PATH=/sub-path/`.
+- **Project name** sets the address (`<name>.pages.dev`). If it isn't `thebeanbox`, add an environment variable
+  `VITE_SITE_URL=https://<name>.pages.dev/` (or your custom domain, ending in `/`) so link previews point to the right place.
+- **Custom domain:** in the Pages project, **Custom domains → Set up a domain**.
+- `public/_headers` sets caching (a year for hashed build files) and basic security headers.
+- `.node-version` pins Node 20 for the build.
 
 ## Settings
 
