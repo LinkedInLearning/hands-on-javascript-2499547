@@ -22,12 +22,12 @@ export default function Statement() {
         <div className="reveal order-1 lg:order-2" style={{ '--reveal-delay': '120ms' }}>
           <Eyebrow>Experience the future of coffee</Eyebrow>
           <h2 id="statement-title" className="display mt-6 text-[clamp(2.3rem,4.8vw,4rem)]">
-            We bring together a love for coffee <span className="emph block">+ the power of technology.</span>
+            What if tomorrow <span className="emph block">tasted familiar?</span>
           </h2>
           <div className="gold-line my-8 max-w-md" />
           <div className="max-w-xl space-y-4 text-lg text-fg/85">
             <p>
-              The Bean Box combines advanced automation with Rwanda's exceptional coffee heritage to deliver a
+              The Bean Box combines advanced reimagined technology with Rwanda's exceptional coffee heritage to deliver a
               premium, automated coffee experience.
             </p>
             <p>

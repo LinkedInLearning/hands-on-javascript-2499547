@@ -12,10 +12,11 @@ export default function Why() {
           id="why-title"
           title={
             <>
-              One machine. <span className="emph block">Every advantage.</span>
+              More than a cup. <span className="emph block">A step into tomorrow.</span>
             </>
           }
         />
+        <p className="reveal mt-6 font-display text-xl font-medium text-fg/85 md:text-2xl">The future, freshly brewed.</p>
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {WHY.map((w, i) => (
             <li key={w.title} className="reveal" style={{ '--reveal-delay': `${(i % 3) * 80}ms` }}>

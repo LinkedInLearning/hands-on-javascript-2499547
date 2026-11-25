@@ -61,12 +61,12 @@ export const GALLERY = [
 ];
 
 export const MACHINE_FEATURES = [
-  { icon: 'robot', title: 'Automated barista', text: 'Grind, brew and hand-off, fully automated.' },
+  { icon: 'robot', title: 'The Bean Box barista', text: 'Grind, brew and hand-off, fully automated.' },
   { icon: 'cup', title: 'Fresh every cup', text: 'Made to order, never pre-poured.' },
   { icon: 'box', title: 'Small footprint', text: 'A full coffee bar in one compact unit.' },
 ];
 
-export const MACHINE_CHIPS = ['Automated', 'Fresh brew', 'Touch to order', 'Contactless'];
+export const MACHINE_CHIPS = ['Soft serve', 'Fresh brew', 'Touch to order', 'Contactless'];
 
 /** Drinks on the menu. Names only. */
 export const MENU = ['Espresso', 'Americano', 'Cappuccino', 'Café Latte', 'Flat White', 'Mocha', 'Hot Chocolate'];
@@ -219,8 +219,8 @@ export const PROGRAMS = [
     icon: 'person',
     name: 'The Bean Box Owner',
     designedFor:
-      'Individuals or businesses looking to own and operate a single Bean Box Robot Coffee Barista. The ideal "Business in a Box" for entrepreneurs who want an automated coffee business with minimal operational complexity.',
-    investment: 'One Bean Box Robot Coffee Barista.',
+      'Individuals or businesses looking to own and operate a single Bean Box Coffee Barista. The ideal "Business in a Box" for entrepreneurs who want an automated coffee business with minimal operational complexity.',
+    investment: 'One Bean Box Coffee Barista.',
     type: 'buy',
   },
   {
@@ -229,7 +229,7 @@ export const PROGRAMS = [
     name: 'The Bean Box Dealer',
     designedFor:
       'Entrepreneurs who wish to build a local Bean Box business by operating multiple units within an exclusive city or metropolitan territory.',
-    investment: 'Minimum purchase of two Bean Box Robot Coffee Baristas.',
+    investment: 'Minimum purchase of two Bean Box Coffee Baristas.',
     type: 'partner',
   },
   {
@@ -238,7 +238,7 @@ export const PROGRAMS = [
     name: 'The Bean Box Entrepreneur',
     designedFor:
       'Experienced entrepreneurs and investors seeking to build and manage a large-scale Bean Box operation across a major geographic territory.',
-    investment: 'Minimum purchase of five Bean Box Robot Coffee Baristas.',
+    investment: 'Minimum purchase of five Bean Box Coffee Baristas.',
     type: 'partner',
   },
 ];

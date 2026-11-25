@@ -47,7 +47,7 @@ export default function Programs() {
                   onClick={() => choose(p.type, p.name)}
                   className="mt-8 inline-flex min-h-11 items-center gap-2 self-start font-semibold text-accent hover:text-fg"
                 >
-                  Enquire about this programme <span aria-hidden="true">→</span>
+                  Explore the opportunity <span aria-hidden="true">→</span>
                 </a>
               </article>
             </li>

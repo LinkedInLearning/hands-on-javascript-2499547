@@ -31,7 +31,7 @@ export default function Machine() {
           </div>
 
           <div className="reveal" style={{ '--reveal-delay': '120ms' }}>
-            <Eyebrow>01 — The machine</Eyebrow>
+            <Eyebrow>01 — The Bean Box</Eyebrow>
             <h2 id="machine-title" className="display mt-5 text-[clamp(2.6rem,5.6vw,4.5rem)]">
               Meet <span className="emph">The Bean Box</span>
             </h2>
@@ -40,9 +40,9 @@ export default function Machine() {
                 <Chip key={c}>{c}</Chip>
               ))}
             </ul>
-            <p className="mt-8 font-display text-2xl font-medium text-hi">Your coffee, crafted by a robot.</p>
+            <p className="mt-8 font-display text-2xl font-medium text-hi">We didn't reinvent coffee. We reinvented the moment.</p>
             <p className="mt-4 max-w-lg text-fg/70">
-              An automated barista inside a glass box. Order on the touchscreen, pay contactless, then watch the arm brew
+              The Bean Box barista inside a glass box. Order on the touchscreen, pay contactless, then watch the arm brew
               your drink and hand over a fresh cup.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-6">
