@@ -15,7 +15,7 @@ export default function Partner() {
             Bring The Bean Box <span className="emph">to your space.</span>
           </h2>
           <p className="mt-6 text-lg text-fg/85">
-            Buy a machine, lease one, or host one at your venue while we run it. Tell us a little about your space and
+            Buy The Bean Box, lease one, or host one at your venue while we run it. Tell us a little about your space and
             we'll recommend the right fit.
           </p>
           <p className="mt-8 inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-2.5 text-sm text-hi">
