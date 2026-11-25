@@ -137,7 +137,7 @@ export const VENUES = [
 export const INQUIRY_TYPES = [
   {
     value: 'buy',
-    title: 'Buy a machine',
+    title: 'Buy The Bean Box',
     text: 'Own a Bean Box outright.',
     submit: 'Request pricing',
   },
