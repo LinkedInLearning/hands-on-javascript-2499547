@@ -61,12 +61,12 @@ export const GALLERY = [
 ];
 
 export const MACHINE_FEATURES = [
-  { icon: 'robot', title: 'Robotic barista', text: 'Grind, brew and hand-off, fully automated.' },
+  { icon: 'robot', title: 'Automated barista', text: 'Grind, brew and hand-off, fully automated.' },
   { icon: 'cup', title: 'Fresh every cup', text: 'Made to order, never pre-poured.' },
   { icon: 'box', title: 'Small footprint', text: 'A full coffee bar in one compact unit.' },
 ];
 
-export const MACHINE_CHIPS = ['Robotic', 'Fresh brew', 'Touch to order', 'Contactless'];
+export const MACHINE_CHIPS = ['Automated', 'Fresh brew', 'Touch to order', 'Contactless'];
 
 /** Drinks on the menu. Names only. */
 export const MENU = ['Espresso', 'Americano', 'Cappuccino', 'Café Latte', 'Flat White', 'Mocha', 'Hot Chocolate'];
@@ -267,6 +267,6 @@ export const STORY = [
     n: '04',
     title: 'The Bean Box',
     text: 'Where innovation meets tradition, crafting the perfect cup in just 90 seconds.',
-    image: { src: '/img/bean-kiosk-render', alt: 'The Bean Box robotic coffee kiosk', contain: true },
+    image: { src: '/img/bean-kiosk-render', alt: 'The Bean Box coffee kiosk', contain: true },
   },
 ];

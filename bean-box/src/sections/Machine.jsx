@@ -42,7 +42,7 @@ export default function Machine() {
             </ul>
             <p className="mt-8 font-display text-2xl font-medium text-hi">Your coffee, crafted by a robot.</p>
             <p className="mt-4 max-w-lg text-fg/70">
-              A robotic barista inside a glass box. Order on the touchscreen, pay contactless, then watch the arm brew
+              An automated barista inside a glass box. Order on the touchscreen, pay contactless, then watch the arm brew
               your drink and hand over a fresh cup.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-6">

@@ -14,7 +14,7 @@ export default function Hero() {
           style={{ paddingTop: 'calc(env(safe-area-inset-top) + 7rem)' }}
         >
           <div className="reveal">
-            <Eyebrow>Robotic coffee by Ravens Tech</Eyebrow>
+            <Eyebrow>Premium coffee by Ravens Tech</Eyebrow>
             <h1 id="hero-title" className="mt-7 font-display uppercase leading-[0.98] tracking-[-0.02em] text-head">
               <span className="flex items-start gap-4 text-[clamp(2.7rem,8.6vw,6rem)] font-extralight lg:text-[clamp(3.2rem,5.6vw,6rem)]">
                 The future of coffee
@@ -74,7 +74,7 @@ export default function Hero() {
           <div className="flex items-center gap-4 text-xs font-medium uppercase tracking-eyebrow text-fg/70">
             <span className="h-px flex-1 bg-accent/50" />
             <span className="h-3 w-px bg-accent/70" />
-            Rwandan coffee · Robotic barista
+            Rwandan coffee · Freshly brewed
             <span className="h-3 w-px bg-accent/70" />
             <span className="h-px w-16 bg-accent/50 sm:w-40" />
           </div>
