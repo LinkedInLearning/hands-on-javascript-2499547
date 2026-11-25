@@ -1,5 +1,5 @@
 export const NAV = [
-  { href: '#machine', label: 'The Machine' },
+  { href: '#machine', label: 'The Bean Box' },
   { href: '/story.html', label: 'Our Story', page: true },
   { href: '#coffee', label: 'Our Coffee' },
   { href: '#menu', label: 'Menu' },
