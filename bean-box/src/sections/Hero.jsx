@@ -74,7 +74,7 @@ export default function Hero() {
           <div className="flex items-center gap-4 text-xs font-medium uppercase tracking-eyebrow text-fg/70">
             <span className="h-px flex-1 bg-accent/50" />
             <span className="h-3 w-px bg-accent/70" />
-            Rwandan coffee · The Alchemist Barista
+            Rwandan coffee · The Bean Box Barista
             <span className="h-3 w-px bg-accent/70" />
             <span className="h-px w-16 bg-accent/50 sm:w-40" />
           </div>
