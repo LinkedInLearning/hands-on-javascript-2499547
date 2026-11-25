@@ -27,7 +27,7 @@ export default function Statement() {
           <div className="gold-line my-8 max-w-md" />
           <div className="max-w-xl space-y-4 text-lg text-fg/85">
             <p className="font-display text-xl font-medium leading-relaxed text-head">
-              In the hills of Rwanda, where women grow 70% of the coffee, every bean carries a story of dedication,
+              In the hills of Rwanda, where coffee is washed and slowly dried, every bean carries a story of dedication,
               resilience and craftsmanship.
             </p>
             <p>
