@@ -60,7 +60,7 @@ export default function Programs() {
             Ready to build <span className="emph">the future of coffee?</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-fg/85">
-            Whether you are looking to own a single robot kiosk, develop your local market, or lead The Bean Box across an
+            Whether you are looking to own a single Bean Box kiosk, develop your local market, or lead The Bean Box across an
             entire region, there is a place for you in the future of automated coffee.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

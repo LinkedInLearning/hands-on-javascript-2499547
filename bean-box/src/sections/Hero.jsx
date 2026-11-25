@@ -45,7 +45,7 @@ export default function Hero() {
                 <Icon name="robot" className="h-6 w-6" strokeWidth={1.5} />
               </span>
               <p className="text-sm text-fg/80">
-                Order on the touchscreen, pay contactless, and watch a robot arm brew your cup.
+                Order on the touchscreen, pay contactless, and watch the barista arm brew your cup.
               </p>
             </div>
           </div>

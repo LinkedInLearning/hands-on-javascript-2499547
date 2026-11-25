@@ -10,11 +10,11 @@ export const NAV = [
 export const IMAGES = {
   render: {
     src: '/img/bean-kiosk-render',
-    alt: 'The Bean Box kiosk in deep green and gold: an illuminated sign, a white robot arm beside the touchscreen, a glass hopper full of coffee beans and the words Grown in Rwanda',
+    alt: 'The Bean Box kiosk in deep green and gold: an illuminated sign, a white barista arm beside the touchscreen, a glass hopper full of coffee beans and the words Grown in Rwanda',
   },
   concept: {
     src: '/img/bean-kiosk-concept',
-    alt: 'Front view of The Bean Box: the robot arm places a cup on the pickup shelf beside the menu screen',
+    alt: 'Front view of The Bean Box: the barista arm places a cup on the pickup shelf beside the menu screen',
   },
   espresso: {
     src: '/img/bean-cup-espresso',
@@ -66,7 +66,7 @@ export const MACHINE_FEATURES = [
   { icon: 'box', title: 'Small footprint', text: 'A full coffee bar in one compact unit.' },
 ];
 
-export const MACHINE_CHIPS = ['Soft serve', 'Fresh brew', 'Touch to order', 'Contactless'];
+export const MACHINE_CHIPS = ['Self-serve', 'Fresh brew', 'Touch to order', 'Contactless'];
 
 /** Drinks on the menu. Names only. */
 export const MENU = ['Espresso', 'Americano', 'Cappuccino', 'Café Latte', 'Flat White', 'Mocha', 'Hot Chocolate'];
@@ -193,7 +193,7 @@ export const ORIGIN_TABS = [
     id: 'cup',
     label: 'The cup',
     title: 'Brewed fresh for you',
-    text: 'Made to order, never pre-poured, and handed to you by the robot arm.',
+    text: 'Made to order, never pre-poured, and handed to you by The Bean Box barista.',
     image: IMAGES.autumn,
   },
 ];
