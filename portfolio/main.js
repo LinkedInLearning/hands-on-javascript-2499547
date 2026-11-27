@@ -2,10 +2,10 @@
  * Portfolio settings: fill these in. Empty values stay hidden.
  * ------------------------------------------------------------------ */
 const PORTFOLIO = {
-  name: '', // e.g. 'Jane Doe' (shown in the header and footer; empty shows "Portfolio")
+  name: 'Yannick Dushime', // shown in the header and footer; empty shows "Portfolio"
   role: 'Senior Data Scientist · Web & Product Builder',
   email: '', // e.g. 'jane@example.com' (shows the "Email me" button)
-  linkedin: '', // e.g. 'https://www.linkedin.com/in/your-profile' (shows the LinkedIn button)
+  linkedin: 'https://www.linkedin.com/in/yannick-rukambura-dushime-2021', // shows the LinkedIn button
 };
 
 /* ------------------------------------------------------------------ */
