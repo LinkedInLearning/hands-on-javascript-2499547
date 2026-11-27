@@ -248,7 +248,10 @@ export const STORY = [
   {
     n: '01',
     title: 'Land of a thousand hills',
-    text: "Rwanda's unique climate and rich soils create the perfect home for exceptional coffee.",
+    text: [
+      'Our story begins in the hills of Rwanda, where coffee is more than a crop. It is a livelihood, a source of pride, and a pathway to economic independence.',
+      'Behind our coffee are extraordinary women whose knowledge, dedication and entrepreneurial spirit bring exceptional Rwandan coffee to life.',
+    ],
     image: { src: '/img/highlands', alt: 'Misty green hills at sunrise', position: 'center 35%' },
   },
   {

@@ -68,7 +68,11 @@ export default function Story() {
                     {c.title}
                   </h2>
                   <div className="my-7 h-px w-24 bg-accent" />
-                  <p className="max-w-lg text-xl leading-relaxed text-fg/90">{c.text}</p>
+                  <div className="max-w-lg space-y-5 text-xl leading-relaxed text-fg/90">
+                    {(Array.isArray(c.text) ? c.text : [c.text]).map((t) => (
+                      <p key={t}>{t}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
             </section>
