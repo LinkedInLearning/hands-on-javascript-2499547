@@ -268,7 +268,14 @@ export const STORY = [
   {
     n: '03',
     title: 'Handpicked by women',
-    text: "Handpicked with care by the women who are the heart of Rwanda's coffee heritage.",
+    text: [
+      "As the morning sun rises over Rwanda's lush green hills, hands move gently through the branches of coffee trees, selecting the ruby-red cherries that have ripened beneath the African sun.",
+      "These are the hands of remarkable women who are at the very heart of Rwanda's coffee heritage.",
+      'With patience, care and a deep connection to the land, they bring their knowledge, dedication and passion to every harvest.',
+      'They are more than coffee farmers. They are entrepreneurs, community leaders and custodians of a rich coffee heritage. Through their craft, they are building a future of opportunity and economic independence for themselves and their families.',
+      'Their story is woven into every bean, and their dedication is reflected in every cup.',
+      'Our mission is not simply to introduce exceptional Rwandan coffee to the world, but to introduce the world to the exceptional women who make it possible.',
+    ],
     image: { src: '/img/story-women-picking', alt: 'A hand picking ripe red coffee cherries from the branch', position: '40% 55%' },
   },
   {
