@@ -45,6 +45,12 @@ export default function Machine() {
               The Bean Box barista inside a glass box. Order on the touchscreen, pay contactless, then watch the arm brew
               your drink and hand over a fresh cup.
             </p>
+            <dl className="mt-7 inline-flex flex-col gap-1 border-l-2 border-accent pl-4">
+              <dt className="text-xs font-semibold uppercase tracking-eyebrow text-accent">Dimensions</dt>
+              <dd className="font-display text-lg font-medium text-fg">
+                1600 × 1300 × 2100 mm <span className="whitespace-nowrap text-sm font-normal text-fg/70">(excluding LED logo)</span>
+              </dd>
+            </dl>
             <div className="mt-9 flex flex-wrap items-center gap-6">
               <Button href="#menu" variant="soft">
                 See the menu
