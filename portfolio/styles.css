@@ -162,6 +162,10 @@ h1.display { font-size: clamp(2.6rem, 7vw, 5.4rem); }
 .tag { font: 600 0.75rem/1 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent) !important; }
 .more { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 2.75rem; margin-top: 0.5rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
 
+/* Third work card spans the full width */
+@media (min-width: 960px) { .work-wide { grid-column: 1 / -1; } .work-wide .browser img { aspect-ratio: 16 / 9; object-position: center; } }
+.browser-green .bar { background: #0b3a2c; color: #e3f1eb; }
+
 /* Case studies */
 .case { padding: clamp(4.5rem, 9vw, 7.5rem) 0; }
 .case-head { max-width: 48rem; }
@@ -208,6 +212,23 @@ h1.display { font-size: clamp(2.6rem, 7vw, 5.4rem); }
 .stats li { background: var(--forest); padding: 1.5rem; }
 .stats strong { display: block; font: 400 clamp(1.8rem, 3.4vw, 2.6rem)/1.1 var(--serif); color: var(--gold); }
 .stats span { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: var(--case-muted); }
+
+/* Icyizere */
+.case-green {
+  --case-fg: #fff; --case-muted: rgb(255 255 255 / 0.8); --case-accent: #f5b66b; --case-line: rgb(227 241 235 / 0.22);
+  background: radial-gradient(60% 45% at 80% 0%, rgb(63 181 138 / 0.35), transparent 70%), #0e5a43;
+  color: var(--case-fg);
+}
+.case-green .display { color: #e3f1eb; }
+.case-green .eyebrow { color: #f5b66b; }
+.case-green .lead { color: rgb(255 255 255 / 0.82); }
+.case-green .lead em { font-style: italic; color: #f5b66b; }
+.case-green :focus-visible { outline-color: #f5b66b; }
+.phones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1.25rem; margin: 3.5rem 0 4rem; }
+@media (min-width: 960px) { .phones { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.75rem; } }
+.phone-frame { background: #0b1512; border-radius: 1.75rem; padding: 0.4rem; box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6); }
+.phone-frame img { border-radius: 1.4rem; aspect-ratio: 720 / 1476; object-fit: cover; object-position: top; width: 100%; }
+.phones figcaption { margin-top: 0.85rem; font-size: 0.9rem; text-align: center; color: var(--case-muted); }
 
 /* Process */
 .process { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; }

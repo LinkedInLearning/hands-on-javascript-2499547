@@ -1,6 +1,6 @@
 # Portfolio
 
-A static, single-page portfolio with two case studies: The Bean Box and Frosti (both by Ravens Tech).
+A static, single-page portfolio with three case studies: The Bean Box and Frosti (both by Ravens Tech), and the Icyizere rental trust app.
 
 - **Your details:** edit the `PORTFOLIO` block at the top of `main.js` (name, role, email, LinkedIn). Empty values stay hidden.
 - **Preview locally:** `python3 -m http.server` in this folder, then open http://localhost:8000.
