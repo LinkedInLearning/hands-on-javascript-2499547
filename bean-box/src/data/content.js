@@ -257,7 +257,12 @@ export const STORY = [
   {
     n: '02',
     title: 'A cherry',
-    text: 'It begins as a single cherry, nurtured by nature, ripened to perfection.',
+    text: [
+      'It begins as a single cherry. Then the cherry begins its transformation: gently depulped, fermented and fully washed, it reveals the precious bean within.',
+      'Patiently dried and carefully sorted, each bean preserves the distinctive character of its origin.',
+      'Slowly transformed through a carefully controlled medium roast, each bean reveals its natural sweetness, rich aromas and beautifully balanced flavors.',
+      'Finally, carefully packaged to preserve its freshness and character, it is ready to begin its journey beyond the hills of Rwanda: from a single cherry to an exceptional premium coffee.',
+    ],
     image: { src: '/img/cherries', alt: 'Coffee cherries ripening on the branch' },
   },
   {
