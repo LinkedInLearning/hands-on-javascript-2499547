@@ -4,7 +4,7 @@
 const PORTFOLIO = {
   name: 'Yannick Dushime', // shown in the header and footer; empty shows "Portfolio"
   role: 'Senior Data Scientist · Web & Product Builder',
-  email: '', // e.g. 'jane@example.com' (shows the "Email me" button)
+  email: 'yannyllc@gmail.com', // shows the "Email me" button
   linkedin: 'https://www.linkedin.com/in/yannick-rukambura-dushime-2021', // shows the LinkedIn button
 };
 
