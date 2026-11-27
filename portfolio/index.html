@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Portfolio | Web Design &amp; Development</title>
+    <meta
+      name="description"
+      content="Brand-led websites, from brand guideline to live site. Case studies: The Bean Box and Frosti by Ravens Tech."
+    />
+    <meta name="theme-color" content="#F4F0E8" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="wrap header-row">
+        <a href="#top" class="wordmark" data-name-target>Portfolio</a>
+        <nav aria-label="Main">
+          <ul class="nav">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrap hero-grid">
+          <div class="reveal">
+            <p class="eyebrow" data-role-target>Web Designer &amp; Developer</p>
+            <h1 id="hero-title" class="display">
+              I build websites that <em>tell a brand's story.</em>
+            </h1>
+            <p class="lead">
+              From brand guideline to live site: brand-led, responsive websites that feel premium, read clearly and turn
+              visitors into partners.
+            </p>
+            <div class="actions">
+              <a class="btn btn-ink" href="#work">View my work</a>
+              <a class="btn btn-line" href="#contact">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-hidden="true" style="--d: 120ms">
+            <div class="phone phone-a">
+              <img src="img/bb-mobile-390.webp" srcset="img/bb-mobile-390.webp 390w, img/bb-mobile-780.webp 780w" sizes="220px" width="390" height="844" alt="" fetchpriority="high" />
+            </div>
+            <div class="phone phone-b">
+              <img src="img/fr-mobile-390.webp" srcset="img/fr-mobile-390.webp 390w, img/fr-mobile-780.webp 780w" sizes="220px" width="390" height="844" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected work -->
+      <section id="work" class="section" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title" class="display h2">Two brands, <em>two very different moods.</em></h2>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-card reveal">
+              <a href="#bean-box" class="work-link" aria-label="The Bean Box case study">
+                <div class="browser browser-forest">
+                  <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>thebeanbox</i></div>
+                  <img src="img/bb-hero-720.webp" srcset="img/bb-hero-720.webp 720w, img/bb-hero-1440.webp 1440w" sizes="(min-width: 960px) 46vw, 92vw" width="1440" height="900" loading="lazy" alt="The Bean Box website hero: a green and gold coffee kiosk beside the headline The future of coffee is here" />
+                </div>
+              </a>
+              <div class="work-meta">
+                <p class="tag">01 · Premium coffee kiosk</p>
+                <h3>The Bean Box</h3>
+                <p>A luxury coffee brand for Ravens Tech's automated kiosk serving Rwandan coffee.</p>
+                <a href="#bean-box" class="more">Read the case study <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal" style="--d: 120ms">
+              <a href="#frosti" class="work-link" aria-label="Frosti case study">
+                <div class="browser browser-butter">
+                  <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>frosti</i></div>
+                  <img src="img/fr-hero-720.webp" srcset="img/fr-hero-720.webp 720w, img/fr-hero-1440.webp 1440w" sizes="(min-width: 960px) 46vw, 92vw" width="1440" height="900" loading="lazy" alt="The Frosti website hero: an orange soft-serve station beside the headline Timeless joy, happiness, served fresh" />
+                </div>
+              </a>
+              <div class="work-meta">
+                <p class="tag">02 · Soft-serve ice cream station</p>
+                <h3>Frosti</h3>
+                <p>A joyful, playful brand for Ravens Tech's soft-serve ice cream station.</p>
+                <a href="#frosti" class="more">Read the case study <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case study: The Bean Box -->
+      <section id="bean-box" class="case case-forest" aria-labelledby="bb-title">
+        <div class="wrap">
+          <div class="case-head reveal">
+            <p class="eyebrow">Case study 01</p>
+            <h2 id="bb-title" class="display h2">The Bean Box</h2>
+            <p class="lead">
+              "Make it feel like a luxury coffee brand, not a vending machine company." That one-line brief shaped every
+              decision.
+            </p>
+            <dl class="facts">
+              <div><dt>Client</dt><dd>Ravens Tech</dd></div>
+              <div><dt>Role</dt><dd>Website design &amp; build</dd></div>
+              <div><dt>Brand guideline</dt><dd>Christelle</dd></div>
+              <div><dt>Pages</dt><dd>Home, Our Story, Privacy</dd></div>
+            </dl>
+            <div class="actions">
+              <a class="btn btn-gold" href="https://claude.ai/artifact/KYmrJ2VueT83xtmL7zc52T" target="_blank" rel="noopener">Visit the site <span class="sr-only">(opens in a new tab)</span></a>
+            </div>
+          </div>
+
+          <figure class="case-shot reveal">
+            <div class="browser browser-dark">
+              <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>thebeanbox</i></div>
+              <img src="img/bb-statement-720.webp" srcset="img/bb-statement-720.webp 720w, img/bb-statement-1440.webp 1440w" sizes="(min-width: 1100px) 1100px, 94vw" width="1440" height="900" loading="lazy" alt="The Bean Box intro section: a Bean Box cup on coffee beans beside the headline What if tomorrow tasted familiar?" />
+            </div>
+          </figure>
+
+          <div class="story-grid">
+            <div class="reveal">
+              <h3 class="h3">The challenge</h3>
+              <p>
+                An automated coffee kiosk can easily look like a vending machine. The site had to feel premium, tell the
+                story of Rwandan coffee and the women who grow it, and still work hard as a sales tool for partners.
+              </p>
+            </div>
+            <div class="reveal" style="--d: 100ms">
+              <h3 class="h3">The approach</h3>
+              <p>
+                My first version was dark and gold: elegant, but generic. Then Christelle's brand guideline arrived and
+                gave the site a real identity, so I rebuilt it around that guideline: forest green and sage, the
+                Montserrat typeface and the real logo.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="h3 reveal decisions-title">Key decisions</h3>
+          <ol class="decisions">
+            <li class="reveal"><span>01</span><div><strong>The machine comes first.</strong> The hero sits on the kiosk's own green, over a hand-drawn coffee-bean pattern, with gold accents for luxury.</div></li>
+            <li class="reveal"><span>02</span><div><strong>Pages like a brand book.</strong> Dark and light sections alternate, just like the guideline pages.</div></li>
+            <li class="reveal"><span>03</span><div><strong>Moments, not machines.</strong> We removed "robotic" from the copy: <em>"We didn't reinvent coffee. We reinvented the moment."</em></div></li>
+            <li class="reveal"><span>04</span><div><strong>The origin is the heart.</strong> A dedicated Story page follows the coffee from the hills of Rwanda to the cup.</div></li>
+            <li class="reveal"><span>05</span><div><strong>Built to do business.</strong> Each partnership programme leads straight to the inquiry form, with the right option already selected.</div></li>
+          </ol>
+
+          <div class="shot-pair">
+            <figure class="reveal">
+              <div class="browser browser-dark">
+                <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>thebeanbox/story</i></div>
+                <img src="img/bb-story-720.webp" srcset="img/bb-story-720.webp 720w, img/bb-story-1440.webp 1440w" sizes="(min-width: 960px) 46vw, 94vw" width="1440" height="900" loading="lazy" alt="The Our Story page: Every cup begins with a story" />
+              </div>
+              <figcaption>The Our Story page</figcaption>
+            </figure>
+            <figure class="reveal" style="--d: 100ms">
+              <div class="browser browser-dark">
+                <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>thebeanbox/#programs</i></div>
+                <img src="img/bb-programs-720.webp" srcset="img/bb-programs-720.webp 720w, img/bb-programs-1440.webp 1440w" sizes="(min-width: 960px) 46vw, 94vw" width="1440" height="900" loading="lazy" alt="The Ways to partner section with Owner, Dealer and Entrepreneur programmes" />
+              </div>
+              <figcaption>Partnership programmes</figcaption>
+            </figure>
+          </div>
+
+          <ul class="stats reveal" aria-label="Results">
+            <li><strong>97</strong><span>Lighthouse performance (mobile)</span></li>
+            <li><strong>100</strong><span>Accessibility, best practices &amp; SEO</span></li>
+            <li><strong>0</strong><span>Accessibility issues found by automated checks</span></li>
+            <li><strong>375–1440px</strong><span>Tested from phone to desktop</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Case study: Frosti -->
+      <section id="frosti" class="case case-butter" aria-labelledby="fr-title">
+        <div class="wrap">
+          <div class="case-head reveal">
+            <p class="eyebrow">Case study 02</p>
+            <h2 id="fr-title" class="display h2">Frosti</h2>
+            <p class="lead">
+              Where The Bean Box is calm and luxurious, Frosti is pure joy: one signature flavor, a golden smile, and a
+              little show in every cup.
+            </p>
+            <dl class="facts">
+              <div><dt>Client</dt><dd>Ravens Tech</dd></div>
+              <div><dt>Role</dt><dd>Website design &amp; build</dd></div>
+              <div><dt>Product</dt><dd>Soft-serve ice cream station</dd></div>
+              <div><dt>Pages</dt><dd>Home, Our Story</dd></div>
+            </dl>
+            <div class="actions">
+              <a class="btn btn-berry" href="https://claude.ai/artifact/85pnagX8P1W5o8wVPwtXRr" target="_blank" rel="noopener">Visit the site <span class="sr-only">(opens in a new tab)</span></a>
+            </div>
+          </div>
+
+          <figure class="case-shot reveal">
+            <div class="browser browser-light">
+              <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>frosti/#how</i></div>
+              <img src="img/fr-how-720.webp" srcset="img/fr-how-720.webp 720w, img/fr-how-1440.webp 1440w" sizes="(min-width: 1100px) 1100px, 94vw" width="1440" height="900" loading="lazy" alt="Frosti's How it works section: Three taps to happy, with an interactive ordering screen" />
+            </div>
+          </figure>
+
+          <div class="story-grid">
+            <div class="reveal">
+              <h3 class="h3">The idea</h3>
+              <p>
+                Ice cream is about happiness, so the brand smiles back: butter yellow, bright orange and deep berry, a
+                rounded display typeface and a smile that appears on the cup, the lid and even the wooden spoon.
+              </p>
+            </div>
+            <div class="reveal" style="--d: 100ms">
+              <h3 class="h3">The standout feature</h3>
+              <p>
+                "Three taps to happy." Visitors can try the ordering screen right on the website: choose, pay and
+                collect, just like the real station, as an illustrative demo with nothing charged.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="h3 reveal decisions-title">Key decisions</h3>
+          <ol class="decisions">
+            <li class="reveal"><span>01</span><div><strong>One flavor, all smiles.</strong> Classic Vanilla is the hero, so the site stays focused.</div></li>
+            <li class="reveal"><span>02</span><div><strong>Quality you can trace.</strong> The story of its Belgian ice cream base, made with fresh cream.</div></li>
+            <li class="reveal"><span>03</span><div><strong>Try before you buy.</strong> An interactive demo of the touchscreen explains the experience better than words.</div></li>
+            <li class="reveal"><span>04</span><div><strong>A sister brand.</strong> It shares The Bean Box's structure (story page, venues, partner programmes) but has its own personality.</div></li>
+          </ol>
+
+          <div class="shot-pair">
+            <figure class="reveal">
+              <div class="browser browser-light">
+                <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>frosti</i></div>
+                <img src="img/fr-hero-720.webp" srcset="img/fr-hero-720.webp 720w, img/fr-hero-1440.webp 1440w" sizes="(min-width: 960px) 46vw, 94vw" width="1440" height="900" loading="lazy" alt="Frosti home page hero" />
+              </div>
+              <figcaption>Home page</figcaption>
+            </figure>
+            <figure class="reveal" style="--d: 100ms">
+              <div class="browser browser-light">
+                <div class="bar" aria-hidden="true"><span></span><span></span><span></span><i>frosti/story</i></div>
+                <img src="img/fr-story-720.webp" srcset="img/fr-story-720.webp 720w, img/fr-story-1440.webp 1440w" sizes="(min-width: 960px) 46vw, 94vw" width="1440" height="900" loading="lazy" alt="Frosti Our Story page: Every swirl begins with a story" />
+              </div>
+              <figcaption>The Our Story page</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" class="section" aria-labelledby="process-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">How I work</p>
+            <h2 id="process-title" class="display h2">From one-line brief <em>to live site.</em></h2>
+          </div>
+          <ol class="process">
+            <li class="reveal"><span>01</span><h3>Brief</h3><p>Find the one sentence that every decision answers to.</p></li>
+            <li class="reveal" style="--d: 60ms"><span>02</span><h3>Brand</h3><p>Work from the brand guideline: colours, type, logo and tone.</p></li>
+            <li class="reveal" style="--d: 120ms"><span>03</span><h3>Story</h3><p>Shape the words and the page flow around the people and the product.</p></li>
+            <li class="reveal" style="--d: 180ms"><span>04</span><h3>Build</h3><p>Responsive, fast, accessible pages that are easy to update.</p></li>
+            <li class="reveal" style="--d: 240ms"><span>05</span><h3>Test</h3><p>Phone to desktop, accessibility and performance checks.</p></li>
+            <li class="reveal" style="--d: 300ms"><span>06</span><h3>Launch</h3><p>Hosted on Cloudflare, so every update goes live automatically.</p></li>
+          </ol>
+
+          <ul class="skills reveal" aria-label="Skills and tools">
+            <li>Brand-led web design</li><li>Responsive layout</li><li>Accessibility (WCAG AA)</li><li>Performance</li>
+            <li>Copy &amp; storytelling</li><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Cloudflare Pages</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-inner reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title" class="display h2">Have a brand with <em>a story to tell?</em></h2>
+          <p class="lead">I'd love to hear about it.</p>
+          <div class="actions center">
+            <a class="btn btn-paper" data-email-target hidden href="#">Email me</a>
+            <a class="btn btn-line-light" data-linkedin-target hidden href="#" target="_blank" rel="noopener">LinkedIn <span class="sr-only">(opens in a new tab)</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <p>© <span data-year></span> <span data-name-target>Portfolio</span></p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
