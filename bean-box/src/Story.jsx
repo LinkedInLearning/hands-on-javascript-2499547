@@ -75,6 +75,37 @@ export default function Story() {
           );
         })}
 
+        {/* Mission */}
+        <section aria-labelledby="mission-title" className="tone-dark bean-bg lux relative overflow-hidden border-b border-accent/20 py-24 md:py-32">
+          <BeanWatermark className="-left-24 top-16 hidden w-[22rem] lg:block" />
+          <div className="container-site relative">
+            <div className="reveal mx-auto max-w-3xl text-center">
+              <Eyebrow className="justify-center">Our mission</Eyebrow>
+              <h2 id="mission-title" className="display mt-6 text-[clamp(2.3rem,5vw,4rem)]">
+                We are here to share <span className="emph block">more than coffee.</span>
+              </h2>
+              <div className="gold-line mx-auto my-10 max-w-sm" />
+            </div>
+            <div className="reveal mx-auto max-w-2xl space-y-6 text-center text-lg leading-relaxed text-fg/85 md:text-xl" style={{ '--reveal-delay': '120ms' }}>
+              <p>
+                Our mission is not simply to bring exceptional Rwandan coffee to the world, but to introduce the world to the
+                exceptional people behind it.
+              </p>
+              <p>
+                We celebrate their craftsmanship, honor their heritage, amplify their stories, and recognize the value of
+                their work.
+              </p>
+              <p>
+                From the hills of Rwanda to your cup, every bean carries a story worth telling, a community worth
+                celebrating, and a legacy worth preserving.
+              </p>
+            </div>
+            <p className="reveal mx-auto mt-14 max-w-3xl text-center font-display text-[clamp(1.6rem,3.2vw,2.5rem)] font-semibold leading-tight text-accent">
+              Because great coffee begins with great people.
+            </p>
+          </div>
+        </section>
+
         <section aria-labelledby="story-cta" className="tone-dark bean-bg lux py-20 text-center md:py-28">
           <div className="container-site">
             <h2 id="story-cta" className="display mx-auto max-w-3xl text-[clamp(2.2rem,4.8vw,3.75rem)]">
