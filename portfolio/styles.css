@@ -237,6 +237,24 @@ h1.display { font-size: clamp(2.6rem, 7vw, 5.4rem); }
 .phone-frame img { border-radius: 1.4rem; aspect-ratio: 720 / 1476; object-fit: cover; object-position: top; width: 100%; }
 .phones figcaption { margin-top: 0.85rem; font-size: 0.9rem; text-align: center; color: var(--case-muted); }
 
+/* Shanana Coffee */
+.print-cover { border-radius: 0.9rem; overflow: hidden; box-shadow: 0 30px 60px -30px rgb(22 21 19 / 0.45); }
+.print-cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.case-charcoal {
+  --case-fg: #f4efe6; --case-muted: rgb(244 239 230 / 0.78); --case-accent: #e2b23c; --case-line: rgb(244 239 230 / 0.16);
+  background: radial-gradient(60% 45% at 80% 0%, rgb(226 178 60 / 0.12), transparent 70%), #161816;
+  color: var(--case-fg);
+}
+.case-charcoal .display { color: #f4efe6; }
+.case-charcoal .eyebrow { color: #e2b23c; }
+.case-charcoal .lead { color: rgb(244 239 230 / 0.82); }
+.case-charcoal .lead em { color: #e2b23c; }
+.case-charcoal :focus-visible { outline-color: #e2b23c; }
+.pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1.25rem; margin: 3.5rem 0 4rem; }
+@media (min-width: 960px) { .pages { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; } }
+.pages img { width: 100%; aspect-ratio: 1275 / 1650; object-fit: cover; box-shadow: 0 24px 50px -24px rgb(0 0 0 / 0.8); }
+.pages figcaption { margin-top: 0.85rem; font-size: 0.9rem; text-align: center; color: var(--case-muted); }
+
 /* Data science */
 .case-ink {
   --case-fg: #fff; --case-muted: rgb(255 255 255 / 0.78); --case-accent: #f0a04b; --case-line: rgb(255 255 255 / 0.14);
