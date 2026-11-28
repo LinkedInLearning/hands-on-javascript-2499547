@@ -1,16 +1,72 @@
-# Hands-On Introduction: JavaScript 
-This is the repository for the LinkedIn Learning course Hands-On Introduction: JavaScript. The full course is available from [LinkedIn Learning][lil-course-url].
+# AI Business Development Agency
 
-![1666989901003](https://user-images.githubusercontent.com/28540243/200742696-e631d384-f572-4306-8283-0fc456243b82.jpeg)
+A multi-agent system that helps overlooked, high-potential small businesses
+gain access to strategic partnerships, enterprise customers, investors,
+suppliers, and growth opportunities — through research, relationship
+building, and strategic introductions.
 
-Are you brand-new to coding in JavaScript? Or are you just looking to learn a little bit more? Sometimes, when you learn a new framework, you need to jump right in and get things done. Join LinkedIn Learning senior instructor Morten Rand-Hendriksen as he shows you what it takes to get started writing JavaScript without trying to familiarize yourself with it beforehand. Explore this interactive, easy-to-follow primer on making changes directly to your code, testing out your new skills as you go, and making edits on your own in real time. Get tips from Morten on picking JS apart, building code from scratch, and then extending it, as well as fetching data from APIs to build new JS components that allow you to use your data. By the end of this course, you’ll be ready to get your hands dirty with your own code, no matter your level of experience or professional background.<br><br>The best way to learn a language is to use it in practice. That’s why this course is integrated with GitHub Codespaces, an instant cloud developer environment that offers all the functionality of your favorite IDE without the need for any local machine setup. With GitHub Codespaces, you can get hands-on practice from any machine, at any time—all while using a tool that you’ll likely encounter in the workplace. Check out the [Using GitHub Codespaces with this course][gcs-video-url] video to learn how to get started.
+Six AI agents, each with a clearly defined role, inputs, outputs, KPIs, and
+handoff process, run in sequence to turn a client intake into a full growth
+report. See [`docs/agency-design.md`](docs/agency-design.md) for the complete
+design: every agent's contract and the reasoning behind the pipeline.
 
-### Instructor
+## Pipeline
 
-Morten Rand-Hendricksen
+1. **Intake & Profiling Agent** — builds a structured Client Profile
+2. **Market Research Agent** — finds candidate partners, customers,
+   investors, and suppliers
+3. **Opportunity Qualification Agent** — scores and ranks them
+4. **Outreach Strategy Agent** — designs the approach for each one worth
+   pursuing
+5. **Introduction & Matchmaking Agent** — drafts ready-to-send introductions
+6. **Relationship Nurture Agent** — tracks responses and recommends next
+   steps
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/morten-rand-hendriksen).
+An Orchestrator runs the pipeline end-to-end and assembles everything into a
+single **Client Growth Report**.
 
-[lil-course-url]: https://www.linkedin.com/learning/hands-on-introduction-javascript
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQHc8xeoOVTOnQ/learning-public-crop_675_1200/0/1666989901003?e=1667952000&v=beta&t=AD6IwBmB-t2zy1ocP6QPDvC-NVC5808WPF5v8nbg7nU
-[gcs-video-url]: https://www.linkedin.com/learning/hands-on-introduction-javascript/using-github-codespaces-with-this-course
+## Setup
+
+```bash
+npm install
+cp .env.example .env
+# then edit .env and set ANTHROPIC_API_KEY
+```
+
+## Run it
+
+```bash
+npm start
+```
+
+This runs the pipeline against the example client in
+`examples/sample-client-intake.json` and writes the full report to
+`output/client-growth-report.json`.
+
+To run it against your own client, write a new intake JSON file (same shape
+as the example) and pass its path:
+
+```bash
+node src/index.js path/to/your-client-intake.json
+```
+
+## Project layout
+
+```
+src/
+  claudeClient.js        Thin wrapper around the Anthropic SDK
+  orchestrator.js         Runs all six agents in sequence, logs KPIs
+  index.js                CLI entry point
+  agents/
+    baseAgent.js           Shared agent behavior
+    intakeAgent.js
+    marketResearchAgent.js
+    qualificationAgent.js
+    outreachStrategyAgent.js
+    introductionAgent.js
+    relationshipNurtureAgent.js
+examples/
+  sample-client-intake.json
+docs/
+  agency-design.md         Full design spec for every agent
+```

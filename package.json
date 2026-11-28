@@ -1,19 +1,15 @@
 {
-  "name": "hands-on-js",
+  "name": "ai-business-dev-agency",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A multi-agent AI business development agency that helps overlooked, high-potential small businesses access strategic partnerships, enterprise customers, investors, suppliers, and growth opportunities.",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-promise": "^6.0.0"
-  }
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "dotenv": "^16.4.5"
+  },
+  "license": "MIT"
 }

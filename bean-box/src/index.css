@@ -1,0 +1,230 @@
+@import '@fontsource-variable/montserrat/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Section tones. Every colour utility (bg, fg, head, accent, hi) reads these. */
+  :root {
+    --bean: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='360' viewBox='0 0 340 360'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='.32' stroke-width='2.2' stroke-linecap='round'%3E%3Cg transform='translate%2820 18%29 rotate%28-35 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28150 10%29 rotate%2840 30 40%29 scale%280.9%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28240 110%29 rotate%28-70 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2895 120%29 rotate%2815 30 40%29 scale%281.1%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2810 190%29 rotate%2860 30 40%29 scale%280.95%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28180 200%29 rotate%28-15 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28270 250%29 rotate%2830 30 40%29 scale%280.85%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2860 280%29 rotate%28-55 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  :root,
+  .tone-dark {
+    --c-bg: 18 33 28; /* forest #12211C */
+    --c-fg: 255 255 255; /* white */
+    --c-head: 200 197 165; /* sage #C8C5A5 */
+    --c-accent: 201 169 110; /* gold #C9A96E: hairlines, labels, numbers */
+    --c-hi: 201 169 110; /* gold */
+  }
+  /* The kiosk's body green, used for the hero */
+  .tone-machine {
+    --c-bg: 24 36 32; /* #182420 */
+  }
+  .tone-light {
+    --c-bg: 200 197 165; /* sage */
+    --c-fg: 18 33 28; /* forest */
+    --c-head: 18 33 28;
+    --c-accent: 18 33 28;
+    --c-hi: 59 42 38; /* coffee brown #3B2A26 */
+  }
+  .tone-dark,
+  .tone-light {
+    color: rgb(var(--c-fg));
+  }
+
+  html {
+    background: #12211C;
+    color: #FFFFFF;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { @apply font-display; }
+  main > section { overflow-x: clip; }
+  ::selection { background: #C8C5A5; color: #12211C; }
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  @media (min-width: 768px) {
+    .container-site {
+      padding-left: max(2rem, env(safe-area-inset-left));
+      padding-right: max(2rem, env(safe-area-inset-right));
+    }
+  }
+
+  /* Emphasis inside headlines: the guideline pairs a light line with a bold one */
+  .emph {
+    font-weight: 700;
+  }
+  /* On forest, bold words take a gold sheen */
+  .tone-dark .emph,
+  :root .emph:not(.tone-light .emph) {
+    background: linear-gradient(100deg, #E6D3A3 0%, #C9A96E 55%, #B8955A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tone-light .emph {
+    background: none;
+    color: inherit;
+  }
+
+  /* Luxury surfaces: deep forest vignette, sage with a soft sheen */
+  .tone-dark.lux,
+  .lux.tone-dark {
+    background:
+      radial-gradient(80% 60% at 50% 0%, rgb(201 169 110 / 0.07), transparent 70%),
+      radial-gradient(120% 90% at 50% 100%, rgb(5 12 9 / 0.55), transparent 70%),
+      rgb(var(--c-bg));
+  }
+  .tone-light.lux {
+    background:
+      radial-gradient(70% 60% at 15% 10%, rgb(255 255 255 / 0.28), transparent 65%),
+      radial-gradient(60% 60% at 90% 100%, rgb(59 42 38 / 0.08), transparent 70%),
+      rgb(var(--c-bg));
+  }
+  /* Thin gold rule with fading ends */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C9A96E 20%, #C9A96E 80%, transparent);
+    opacity: 0.6;
+  }
+
+  .display {
+    @apply font-display font-light uppercase text-head;
+    letter-spacing: -0.02em;
+    line-height: 1.04;
+  }
+
+  /* Guideline section title: small bar + SemiBold heading */
+  .bar-title {
+    @apply flex items-center gap-4 font-display text-sm font-semibold uppercase tracking-eyebrow text-accent;
+  }
+  .bar-title::before {
+    content: '';
+    width: 1.75rem;
+    height: 0.5rem;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+
+  .rule {
+    height: 1px;
+    background: rgb(var(--c-accent) / 0.35);
+  }
+
+  /* Section backgrounds: tone colour plus a faint light from the opposite tone */
+  .glow-left {
+    background:
+      radial-gradient(55% 45% at 12% 18%, rgb(var(--c-accent) / 0.07), transparent 70%),
+      rgb(var(--c-bg));
+  }
+  .glow-gold {
+    background:
+      radial-gradient(50% 45% at 85% 15%, rgb(var(--c-accent) / 0.07), transparent 70%),
+      rgb(var(--c-bg));
+  }
+  .glow-center {
+    background:
+      radial-gradient(55% 50% at 50% 0%, rgb(var(--c-accent) / 0.07), transparent 75%),
+      rgb(var(--c-bg));
+  }
+
+  /* Hand-drawn coffee-bean pattern behind forest sections */
+  .bean-bg {
+    background-color: rgb(var(--c-bg));
+    background-blend-mode: normal;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='360' viewBox='0 0 340 360'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='.32' stroke-width='2.2' stroke-linecap='round'%3E%3Cg transform='translate%2820 18%29 rotate%28-35 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28150 10%29 rotate%2840 30 40%29 scale%280.9%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28240 110%29 rotate%28-70 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2895 120%29 rotate%2815 30 40%29 scale%281.1%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2810 190%29 rotate%2860 30 40%29 scale%280.95%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28180 200%29 rotate%28-15 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%28270 250%29 rotate%2830 30 40%29 scale%280.85%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3Cg transform='translate%2860 280%29 rotate%28-55 30 40%29 scale%281%29'%3E%3Cpath d='M30 3C47 3 57 20 57 40S47 77 30 77 3 60 3 40 13 3 30 3Z'/%3E%3Cpath d='M31 6C21 20 39 30 30 41S23 63 30 74'/%3E%3Cpath d='M16 22c-3 6-4 14-2 22M44 56c3-6 4-14 2-22' stroke-dasharray='3 5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 340px 360px;
+  }
+  .bean-bg.lux {
+    background-image: radial-gradient(80% 60% at 50% 0%, rgb(201 169 110 / 0.08), transparent 70%), radial-gradient(120% 90% at 50% 100%, rgb(5 12 9 / 0.55), transparent 70%), var(--bean);
+    background-size: auto, auto, 340px 360px;
+  }
+
+  .placeholder-box {
+    background:
+      repeating-linear-gradient(135deg, rgb(var(--c-accent) / 0.06) 0 2px, transparent 2px 14px),
+      rgb(var(--c-fg) / 0.04);
+  }
+
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  .field {
+    @apply block w-full rounded-xl border bg-fg/[0.04] px-4 py-3 text-base text-fg placeholder:text-fg/45;
+    border-color: rgb(var(--c-fg) / 0.2);
+    min-height: 3rem;
+  }
+  .field:focus-visible { outline-offset: 1px; border-color: rgb(var(--c-accent)); }
+  .field[aria-invalid='true'] { border-color: rgb(var(--c-hi)); border-width: 2px; }
+  select.field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23C8C5A5' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Fade-up on scroll: only hides content when JS is running and motion is allowed */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .lift { transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+  .lift:hover { transform: translateY(-2px); }
+}
+
+/* Bean pattern on sage: same drawing, softer, layered under the sheen */
+.tone-light.bean-bg {
+  isolation: isolate;
+  background:
+    radial-gradient(70% 60% at 15% 10%, rgb(255 255 255 / 0.28), transparent 65%),
+    radial-gradient(60% 60% at 90% 100%, rgb(59 42 38 / 0.08), transparent 70%),
+    rgb(var(--c-bg));
+}
+.tone-light.bean-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--bean);
+  background-size: 340px 360px;
+  opacity: 0.26;
+}
